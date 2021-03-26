@@ -16,7 +16,7 @@
         <use xlink:href="icons/stack.svg#header--logo-text"></use>
       </svg>
     </a>
-    <button class="header__menu-toggle header__menu-toggle--active">
+    <button class="header__menu-toggle header__menu-toggle--active" hidden>
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <ul class="navigation navigation--active">
@@ -41,7 +41,7 @@
       <div class="promo__image">
         <img src="img/promo/index-can-mobile.png" alt="">
       </div>
-      <a class="promo__button button" href="#">подобрать программу</a>
+      <a class="promo__button" href="#">подобрать программу</a>
     </section>
     <section class="directions">
       <h2 class="visually-hidden">Программа питания</h2>
@@ -101,8 +101,12 @@
           <th class="demo__cell-title">снижение <br>веса</th>
           <th class="demo__cell-title">затрачено <br>времени</th>
         </tr>
+        <tr class="demo__block">
+          <td class="demo__cell-title">Затраты на питание</td>
+          <td class="demo__cell-value">15 000 РУБ</td>
+        </tr>
       </table>
-      <p class="demo__cost">Затраты на питание: <span>15 000 РУБ.</span> </p>
+      <p class="demo__cost">Затраты на питание: <span>.</span> </p>
       <div class="demo__slider slider">
         <div class="slider__img slider__img--active">
           <img src="img/demo/cat-mobile.png" alt="было">
@@ -112,12 +116,12 @@
         </div>
         <div class="slider__range">
           <div class="slider__bar">
-            <button class="slider__pin" type="button">
+            <button class="slider__pin" type="button" hidden>
               <span class="visually-hidden">Ползунок слайдера</span>
             </button>
           </div>
-          <button class="slider__label slider__label--before">Было</button>
-          <button class="slider__label slider__label--after">Стало</button>
+          <button class="slider__label slider__label--before">Было</button hidden>
+          <button class="slider__label slider__label--after">Стало</button hidden>
         </div>
       </div>
     </section>
@@ -142,23 +146,17 @@
       <ul class="footer__social">
         <li class="footer__item">
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-svg footer__social-svg--vkontakte" role="img" aria-label="Мы вконтакте">
-              <use xlink:href="icons/stack.svg#footer-lcon--icon-vkontakte"></use>
-            </svg>
+            <span class="visually-hidden">Мы вконтакте</span>
           </a>
         </li>
         <li class="footer__item">
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-svg footer__social-svg--instagram" role="img" aria-label="Мы в Инстаграме">
-              <use xlink:href="icons/stack.svg#footer-lcon--icon-instagram"></use>
-            </svg>
+            <span class="visually-hidden">Мы в Инстаграме</span>
           </a>
         </li>
         <li class="footer__item">
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-svg footer__social-svg--facebook" role="img" aria-label="Мы в Фейсбуке">
-              <use xlink:href="icons/stack.svg#footer-lcon--icon-facebook"></use>
-            </svg>
+            <span class="visually-hidden">Мы в Фейсбуке</span>
           </a>
         </li>
       </ul>
