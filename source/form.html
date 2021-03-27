@@ -35,21 +35,21 @@
     <section class="programm">
       <h2 class="programm__title">Подбор программы</h2>
       <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      <form class="programm__form" action="https://echo.htmlacademy.ru/" method="POST">
+      <form class="programm__form" action="https://echo.htmlacademy.ru/" method="GET">
         <fieldset class="programm__info programm__info--data-cat">
           <legend class="visually-hidden">Информация о коте</legend>
           <ul class="programm__list">
             <li class="programm__field">
               <label class="programm__label" for="name">Имя:<sup>*</sup></label>
-              <input class="programm__input" type="text" id="name" placeholder="барсик" required>
+              <input class="programm__input" type="text" id="name" name="fullname" placeholder="барсик" required>
             </li>
             <li class="programm__field">
               <label class="programm__label" for="weight">Вес (кг):<sup>*</sup></label>
-              <input class="programm__input" type="number" id="weight" placeholder="7" required>
+              <input class="programm__input" type="number" id="weight" name="weight" placeholder="7" required>
             </li>
             <li class="programm__field">
               <label class="programm__label" for="age">Возраст (лет):</label>
-              <input class="programm__input" type="number" id="age" placeholder="7">
+              <input class="programm__input" type="number" id="age" name="age" placeholder="7">
             </li>
           </ul>
         </fieldset>
@@ -75,11 +75,11 @@
           <ul class="programm__list">
             <li class="programm__data">
               <label class="programm__data-label" for="mail">E-mail:<sup>*</sup></label>
-              <input class="programm__data-input" type="text" id="mail" placeholder="kuklachev@gmail.com">
+              <input class="programm__data-input" type="text" id="mail" name="mail" placeholder="kuklachev@gmail.com">
             </li>
             <li class="programm__data-data">
               <label class="programm__data-label" for="phone">Телефон:<sup>*</sup></label>
-              <input class="programm__data-input" type="text" id="phone" placeholder="8 (960) 900-60-90">
+              <input class="programm__data-input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90">
             </li>
           </ul>
         </fieldset>
@@ -87,7 +87,7 @@
           <legend class="programm__title">Комментарий</legend>
           <div class="programm__comment">
             <label class="programm__comment-label visually-hidden" for="textarea">Текст письма:</label>
-            <textarea class="programm__comment-textarea" name="" id="textarea" cols="30" rows="5"
+            <textarea class="programm__comment-textarea" name="" id="textarea" name="textarea" cols="30" rows="5"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
@@ -95,19 +95,19 @@
           <legend class="programm__title">Дополнительно</legend>
           <ul class="programm__list">
             <li class="programm__extra">
-              <input class="programm__extra-input visually-hidden" type="checkbox" id="sweetener" checked>
+              <input class="programm__extra-input visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
               <label class="programm__extra-label" for="sweetener">сахарозаменитель</label>
             </li>
             <li class="programm__extra">
-              <input class="visually-hidden" type="checkbox" id="water">
+              <input class="visually-hidden" type="checkbox" id="water" name="water">
               <label class="programm__extra-label" for="water">питьевая вода</label>
             </li>
             <li class="programm__extra">
-              <input class="visually-hidden" type="checkbox" id="milk">
+              <input class="visually-hidden" type="checkbox" id="milk" name="milk">
               <label class="programm__extra-label" for="milk">молоко</label>
             </li>
             <li class="programm__extra">
-              <input class="visually-hidden" type="checkbox" id="vitamins">
+              <input class="visually-hidden" type="checkbox" id="vitamins" name="vitamins">
               <label class="programm__extra-label" for="vitamins">витамины</label>
             </li>
           </ul>
