@@ -1,0 +1,275 @@
+/*@include font-oswald-36x36;*/
+
+@mixin font-oswald-36x36 {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  font-family: $font-oswald;
+}
+
+/*@include font-oswald-36x40;*/
+
+@mixin font-oswald-36x40 {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: $font-oswald;
+}
+
+/*@include font-arial-12x12*/
+
+@mixin font-arial-12x12 {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: $font-arial;
+}
+
+/*@include font-arial-12x16*/
+
+@mixin font-arial-12x16 {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $font-arial;
+}
+
+/*@include font-size-14x14;*/
+
+@mixin font-size-14x14 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+/*@include font-size-14x16;*/
+
+@mixin font-size-14x16 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/*@include font-size-14x18;*/
+
+@mixin font-size-14x18 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/*@include font-size-14x20;*/
+
+@mixin font-size-14x20 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/*@include font-oswald-16x16;*/
+
+@mixin font-oswald-16x16 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-oswald;
+}
+
+/*@include font-size-16x18;*/
+
+@mixin font-size-16x18 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/*@include font-size-16x20;*/
+
+@mixin font-size-16x20 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/*@include font-oswald-18x24;*/
+
+@mixin font-oswald-18x24 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: $font-oswald;
+  text-transform: uppercase;
+}
+
+/*@include font-oswald-24x24;*/
+
+@mixin font-oswald-24x24 {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $font-oswald;
+}
+
+/*@include font-oswald-24x26;*/
+
+@mixin font-oswald-24x26 {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  font-family: $font-oswald;
+}
+
+/*@include font-oswald-24x37;*/
+
+@mixin font-oswald-24x37 {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
+  font-family: $font-oswald;
+}
+
+/*@include font-size-20x20;*/
+
+@mixin font-size-20x20 {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+/*@include font-size-20x30;*/
+
+@mixin font-size-20x30 {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/*@include font-oswald-60x60;*/
+
+@mixin font-oswald-60x60 {
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 60px;
+  font-family: $font-oswald;
+}
+
+/*@include link;*/
+
+@mixin link {
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+/*@include style-list;*/
+
+@mixin style-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/*@include btn;*/
+
+@mixin btn {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/*@include logo;*/
+
+@mixin logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+/*@include hover-active-menu;*/
+
+@mixin hover-active-menu {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+/*@include green-btn;*/
+
+@mixin green-btn {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  border: none;
+  background: var(--basic_green);
+  font-family: $font-oswald;
+  box-sizing: border-box;
+
+  &:hover {
+    border: none;
+    background: var(--basic_green-2);
+  }
+
+  &:active {
+    color: var(--white-30);
+  }
+}
+
+/*@include gray-btn;*/
+
+@mixin gray-btn {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--special_dark-grey);
+  border: none;
+  background: var(--basic_grey);
+  font-family: $font-oswald;
+  box-sizing: border-box;
+
+  &:hover {
+    border: none;
+    background: var(--gray-catalog);
+  }
+
+  &:active {
+    color: var(--black-30);
+  }
+}
+
+/*@include technology;*/
+
+@mixin technology {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  left: -80px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: var(--basic_green);
+}
+
+/*@include chekbox;*/
+
+@mixin chekbox {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  top: -5px;
+  left: -5px;
+}
