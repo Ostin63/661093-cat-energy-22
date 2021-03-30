@@ -1,6 +1,10 @@
 .technology {
+  margin-top: 27px;
   padding-bottom: 42px;
   background: var(--basic-white);
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-row-gap: 40px;
 }
 
 .technology__title {
@@ -11,6 +15,7 @@
   font-size: 36px;
   line-height: 40px;
   font-family: $font-oswald;
+  grid-column: 2 / -2;
 }
 
 .technology__list {
@@ -18,14 +23,13 @@
   margin: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 20px 1fr 20px;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 60px);
   grid-row-gap: 20px;
 }
 
 .technology__item {
   padding-left: 80px;
-  grid-column: 2 / -2;
 }
 
 .technology__text {
