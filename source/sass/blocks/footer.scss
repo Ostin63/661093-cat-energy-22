@@ -1,0 +1,117 @@
+.footer {
+  background: var(--basic-white);
+
+  &--catalog {
+    background: var(--basic_grey);
+  }
+}
+
+.footer__cooperation {
+  padding: 28px 19px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__text {
+  width: 50%;
+  margin: 0;
+  @include font-size-16x18;
+  font-family: $font-oswald;
+  text-transform: uppercase;
+  color: var(--special-black);
+}
+
+.footer__adress {
+  width: 50%;
+  margin: 0;
+  @include font-size-14x20;
+  color: var(--special_dark-grey);
+  font-family: $font-arial;
+}
+
+.footer__map,
+.footer__iframe {
+  width: 100%;
+  height: 362px;
+}
+
+.footer__bottom {
+  padding: 0 20px 0;
+  display: grid;
+  grid-template-rows: 95px 63px 78px;
+  background: var(--basic_grey);
+}
+
+.footer__logo {
+  width: 100%;
+  padding-top: 39px;
+  text-align: center;
+  border-bottom: $border-grey-1;
+}
+
+.footer__logo-svg {
+  width: 128px;
+  height: 27px;
+  display: inline-block;
+}
+
+.footer__social {
+  @include style-list;
+  min-width: 130px;
+  padding-top: 20px;
+  padding-left: 73px;
+  padding-right: 77px;
+  padding-bottom: 20px;
+  border-bottom: $border-grey-1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__item {
+  display: inline-block;
+  align-self: center;
+}
+
+.footer__social-link {
+  display: inline-block;
+
+  &--vkontakte {
+    width: 23px;
+    height: 16px;
+  }
+
+  &--instagram {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--facebook {
+    width: 13px;
+    height: 16px;
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__text-Academy {
+  @include link;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--special_dark-grey);
+  font-family: $font-arial;
+}
+
+.footer__logo-Academy {
+  width: 27px;
+  height: 34px;
+  display: inline-block;
+}
+
+.footer__svg-logo-Academy {
+  fill: var(--special_grey-2);
+  @include hovericon;
+}
