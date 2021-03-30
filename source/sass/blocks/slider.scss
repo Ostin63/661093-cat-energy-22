@@ -1,0 +1,73 @@
+.slider {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.slider__img {
+
+  max-width: 311px;
+  margin: 0 auto;
+  display: none;
+  text-align: center;
+
+  &--active {
+    display: block;
+  }
+}
+
+.slider__range {
+  padding-left: 27px;
+  padding-right: 25px;
+  display: grid;
+  grid-template-columns: 70px 1fr 70px;
+}
+
+.slider__label {
+  width: 70px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: none;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-oswald;
+  box-sizing: border-box;
+
+  &--before {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  &--after {
+    grid-row: 1 / 2;
+    grid-column: 3 / -1;
+  }
+}
+
+.slider__bar {
+  height: 14px;
+  padding-left: 2px;
+  padding-right: 2px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 7px;
+  border: 1px solid var(--special_grey);
+  grid-row: 1 / 2;
+  grid-column: 2 / -2;
+  background: var(--basic-white);
+}
+
+.slider__pin {
+  width: 35px;
+  height: 6px;
+  padding: 0;
+  border: none;
+  color: var(--basic-green);
+  background: url("../img/demo/range-button.svg") 50% 50% no-repeat;
+  background-size: cover;
+}
