@@ -1,0 +1,58 @@
+.technology {
+  padding-bottom: 42px;
+  background: var(--basic-white);
+}
+
+.technology__title {
+  margin-top: 27px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  @include font-oswald-36x40;
+}
+
+.technology__list {
+  @include style-list;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: repeat(4, 60px);
+  grid-row-gap: 20px;
+}
+
+.technology__item {
+  padding-left: 80px;
+  grid-column: 2 / -2;
+}
+
+.technology__text {
+  position: relative;
+  margin: 0;
+
+  &--food {
+    &::before {
+      background-image: url("../img/technology/group-1.svg");
+      @include technology;
+    }
+  }
+
+
+  &--boiling {
+    &::before {
+      background-image: url("../img/technology/group-2.svg");
+      @include technology;
+    }
+  }
+
+  &--our-food {
+    &::before {
+      background-image: url("../img/technology/group-3.svg");
+      @include technology;
+    }
+  }
+
+  &--changes {
+    &::before {
+      background-image: url("../img/technology/group-4.svg");
+      @include technology;
+    }
+  }
+}
