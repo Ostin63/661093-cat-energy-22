@@ -15,7 +15,9 @@
 .footer__text {
   width: 50%;
   margin: 0;
-  @include font-size-16x18;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
   font-family: $font-oswald;
   text-transform: uppercase;
   color: var(--special-black);
@@ -24,7 +26,9 @@
 .footer__adress {
   width: 50%;
   margin: 0;
-  @include font-size-14x20;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
   color: var(--special_dark-grey);
   font-family: $font-arial;
 }
@@ -56,7 +60,9 @@
 }
 
 .footer__social {
-  @include style-list;
+  padding: 0;
+  margin: 0;
+  list-style: none;
   min-width: 130px;
   padding-top: 20px;
   padding-left: 73px;
@@ -98,7 +104,7 @@
 }
 
 .footer__text-Academy {
-  @include link;
+  text-decoration: none;
   font-size: 16px;
   line-height: 18px;
   color: var(--special_dark-grey);
@@ -113,5 +119,4 @@
 
 .footer__svg-logo-Academy {
   fill: var(--special_grey-2);
-  @include hovericon;
 }

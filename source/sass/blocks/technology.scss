@@ -7,11 +7,16 @@
   margin-top: 27px;
   margin-left: 20px;
   margin-bottom: 40px;
-  @include font-oswald-36x40;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: $font-oswald;
 }
 
 .technology__list {
-  @include style-list;
+  padding: 0;
+  margin: 0;
+  list-style: none;
   display: grid;
   grid-template-columns: 20px 1fr 20px;
   grid-template-rows: repeat(4, 60px);
@@ -29,30 +34,62 @@
 
   &--food {
     &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      left: -80px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: var(--basic_green);
+      background-size: 30px 30px, 60px 60px;
       background-image: url("../img/technology/group-1.svg");
-      @include technology;
     }
   }
 
 
   &--boiling {
     &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      left: -80px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: var(--basic_green);
+      background-size: 30px 30px, 60px 60px;
       background-image: url("../img/technology/group-2.svg");
-      @include technology;
     }
   }
 
   &--our-food {
     &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      left: -80px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: var(--basic_green);
+      background-size: 30px 30px, 60px 60px;
       background-image: url("../img/technology/group-3.svg");
-      @include technology;
     }
   }
 
   &--changes {
     &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      left: -80px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: var(--basic_green);
+      background-size: 30px 30px, 60px 60px;
       background-image: url("../img/technology/group-4.svg");
-      @include technology;
     }
   }
 }
