@@ -1,0 +1,39 @@
+.button {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  font-family: $font-oswald;
+  box-sizing: border-box;
+
+  &--green {
+    color: var(--basic-white);
+    background: var(--basic_green);
+
+    &:hover {
+      border: none;
+      background: var(--basic_green-2);
+    }
+
+    &:active {
+      color: var(--white-30);
+    }
+  }
+
+  &--gray {
+    color: var(--special_dark-grey);
+    background: var(--basic_grey);
+
+    &:hover {
+      border: none;
+      background: var(--gray-catalog);
+    }
+
+    &:active {
+      color: var(--black-30);
+    }
+  }
+}
