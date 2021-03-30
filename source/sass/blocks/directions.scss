@@ -1,0 +1,105 @@
+.directions {
+  background: var(--basic-white);
+}
+
+.directions__list {
+  @include style-list;
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: repeat(2, max-content);
+  grid-row-gap: 20px;
+}
+
+.directions__item {
+  padding-left: 20px;
+  padding-right: 20px;
+  list-style: none;
+  background: var(--basic_grey);
+  grid-column: 2 / -2;
+}
+
+.directions__title {
+  position: relative;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 71px;
+  text-transform: uppercase;
+  @include font-oswald-24x37;
+
+  &--icon-down {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -9px;
+      left: -62px;
+      width: 50px;
+      height: 53px;
+      background: url("../img/directions/cat-back.svg") 50% 50% no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+  }
+
+  &--icon-up {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -77px;
+      width: 67px;
+      height: 50px;
+      background: url("../img/directions/cat-back-up.svg") 50% 50% no-repeat;
+    }
+  }
+}
+
+.directions__text {
+  margin: 0px;
+  margin-top: 29px;
+  margin-right: 13px;
+
+  &--padding {
+    padding-right: 10px;
+  }
+}
+
+.directions__button {
+  @include link;
+  display: flex;
+  margin-top: 23px;
+  margin-bottom: 18px;
+  padding-top: 17px;
+  border-top: 1px solid var(--special_grey);
+  @include font-oswald-16x16;
+  text-transform: uppercase;
+  color: var(--basic-black);
+
+  &--arrow {
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 12px;
+      align-self: center;
+      margin-left: 17px;
+      background: url("../img/directions/arrow.svg") 50% 50% no-repeat;
+      background-size: cover;
+      box-sizing: border-box;
+    }
+
+    &:hover {
+      &::after {
+        width: 32px;
+        height: 10px;
+        background: none;
+        background: url("../img/directions/arrow-hover.svg") 50% 50% no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
