@@ -1,0 +1,72 @@
+.header {
+  background: var(--basic-white);
+  border-bottom: $border-gray;
+  display: grid;
+  grid-template-columns: 53px 1fr 44px;
+  grid-template-rows: 66px 1fr;
+  background: var(--basic-white);
+}
+
+.header__logo {
+  width: 34px;
+  height: 38px;
+  justify-self: end;
+  align-self: center;
+  grid-column: 1 / 2;
+  @include logo;
+}
+
+
+.header__logo-text {
+  width: 101px;
+  height: 18px;
+  justify-self: center;
+  align-self: center;
+  grid-column: 2 / 3;
+  @include logo;
+
+}
+
+.header__menu-toggle {
+  width: 20px;
+  height: 20px;
+  justify-self: start;
+  align-self: center;
+  @include btn;
+  background: url("../img/header/sandwich.svg") 50% 50% no-repeat;
+  grid-column: 3 / -1;
+
+  &--active {
+    background: none;
+    background: url("../img/header/close.svg") 50% 50% no-repeat;
+  }
+}
+
+.navigation {
+  @include style-list;
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.navigation__item {
+  list-style: none;
+  height: 66px;
+  border-top: $border-gray;
+  text-transform: uppercase;
+  @include font-size-20x20;
+  font-family: $font-oswaldmidi;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include hover-active-menu;
+}
+
+.navigation__link {
+  @include link;
+}
