@@ -166,16 +166,16 @@
     padding-top: 9px;
   }
 
-  &--diet:checked + .programm__label--diet::before {
+  &--diet:checked+.programm__label--diet::before {
     width: 30px;
     height: 30px;
     background: url("../icons/stack.svg#form--radio-active") 50% 50% no-repeat;
     background-size: cover;
   }
 
-  &--extra:checked + .programm__label--extra::before {
+  &--extra:checked+.programm__label--extra::before {
     background: url("../icons/stack.svg#form--tick") 50% 50% no-repeat;
-    background-size: 26px 26px;
+    background-size: cover;
   }
 }
 
