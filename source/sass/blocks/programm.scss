@@ -1,30 +1,37 @@
 .programm {
+  padding-top: 27px;
   background: var(--basic-white);
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
 }
 
 .programm__title {
-  margin: 27px 20px 0;
+  margin-top: 27px;
+  margin-bottom: 37px;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
   font-family: $font-oswald;
   color: var(--basic-black);
+  grid-column: 2 / -2;
 }
 
 .programm__text {
   width: 226px;
-  margin: 37px 20px 0;
+  margin: 0;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   font-family: $font-oswald;
   color: var(--basic-black);
+  grid-column: 2 / -2;
 }
 
 .programm__form {
   margin-top: 39px;
   padding-bottom: 32px;
+  grid-column: 2 / -2;
 }
 
 .programm__info {
