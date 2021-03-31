@@ -8,9 +8,7 @@
 }
 
 .technology__title {
-  margin-top: 27px;
-  margin-left: 20px;
-  margin-bottom: 40px;
+  margin: 0;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
@@ -26,6 +24,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 60px);
   grid-row-gap: 20px;
+  grid-column: 2 / -2;
 }
 
 .technology__item {
