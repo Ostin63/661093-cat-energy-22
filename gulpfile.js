@@ -1,15 +1,18 @@
-const gulp = require("gulp");
+const {src, dest, watch, series} = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
+const svgsprite = require("gulp-svg-sprite");
 const sync = require("browser-sync").create();
 
 // Styles
 
 const styles = () => {
-  return gulp.src("source/sass/style.scss")
+  return src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -17,11 +20,43 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(dest("source/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+// Logo
+
+const logo = () => {
+  return src("source/img/logo/*.svg")
+    .pipe(imagemin([
+      imagemin.svgo()
+    ]))
+    .pipe(dest("source/icons"))
+}
+
+exports.logo = logo;
+
+// Svg stack
+
+const svgstacke = () => {
+  return src("source/img/**/*.svg")
+    .pipe(svgsprite({
+      mode: {
+        stack: {
+          bust: false
+        }
+      }
+    }))
+    .pipe(imagemin([
+      imagemin.svgo()
+    ]))
+    .pipe(rename("stack.svg"))
+    .pipe(dest("source/icons"));
+}
+
+exports.svgstacke = svgstacke;
 
 // Server
 
@@ -42,10 +77,16 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  watch("source/sass/**/*.scss", series("styles"));
+  watch("source/*.html").on("change", sync.reload);
+  watch("source/img/**/*.svg", series(svgstacke));
+  watch("source/img/logo/*.svg", series(logo));
 }
 
-exports.default = gulp.series(
-  styles, server, watcher
+exports.default = series(
+  styles,
+  server,
+  watcher,
+  svgstacke,
+  logo
 );
