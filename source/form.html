@@ -4,19 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header header">
     <a class="header__logo" href="index.html">
-      <img src="icons/stack.svg#header--logo-mobile" width="34" height="38" alt="Логотип магазина Cat Energy">
+      <img src="img/logo/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
     </a>
     <a class="header__logo-text" href="index.html">
-      <svg role="img" width="101" height="18" aria-label="Логотип магазина Cat Energy">
-        <use xlink:href="icons/stack.svg#header--logo-text"></use>
-      </svg>
+      <img src="img/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Cat Energy">
     </a>
-    <button class="header__menu-toggle header__menu-toggle--active" hidden>
+    <button class="header__menu-toggle header__menu-toggle--active">
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <ul class="navigation navigation--active">
@@ -34,133 +33,144 @@
   <main class="page-main">
     <section class="programm">
       <h2 class="programm__title">Подбор программы</h2>
-      <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="programm__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="programm__form" action="https://echo.htmlacademy.ru/" method="POST">
         <fieldset class="programm__info programm__info--data-cat">
           <legend class="visually-hidden">Информация о коте</legend>
           <ul class="programm__list">
             <li class="programm__field">
               <label class="programm__label" for="name">Имя:<sup>*</sup></label>
-              <input class="programm__input" type="text" id="name" name="fullname" placeholder="барсик" required>
+              <input class="programm__input" type="text" id="name" name="full-name" placeholder="барсик" required>
             </li>
             <li class="programm__field">
-              <label class="programm__label" for="weight">Вес (кг):<sup>*</sup></label>
+              <label class="programm__label" for="weight">Вес&nbsp;(кг):<sup>*</sup></label>
               <input class="programm__input" type="number" id="weight" name="weight" placeholder="7" required>
             </li>
             <li class="programm__field">
-              <label class="programm__label" for="age">Возраст (лет):</label>
+              <label class="programm__label" for="age">Возраст&nbsp;(лет):</label>
               <input class="programm__input" type="number" id="age" name="age" placeholder="7">
             </li>
           </ul>
         </fieldset>
         <fieldset class="programm__info programm__info--diet">
           <legend class="visually-hidden">Выбор диеты</legend>
-          <ul class="programm__list">
-            <li class="programm__diet">
-              <input class="visually-hidden" type="radio" id="remove-weight" name="group-weight" checked>
-              <label class="programm__diet-label" for="remove-weight">похудение</label>
+          <ul class="programm__list programm__list--diet">
+            <li class="programm__field programm__field--diet">
+              <input class="programm__input programm__input--diet visually-hidden" type="radio" id="remove-weight"
+                name="group-weight" checked>
+              <label class="programm__label programm__label--diet" for="remove-weight">похудение</label>
             </li>
-            <li class="programm__diet">
-              <input class="visually-hidden" type="radio" id="add-weight" name="group-weight">
-              <label class="programm__diet-label" for="add-weight">Набор массы</label>
+            <li class="programm__field programm__field--diet">
+              <input class="programm__input programm__input--diet visually-hidden" type="radio" id="add-weight"
+                name="group-weight">
+              <label class="programm__label programm__label--diet" for="add-weight">Набор массы</label>
             </li>
-            <li class="programm__diet">
-              <input class="visually-hidden" type="radio" id="not know" name="group-weight">
-              <label class="programm__diet-label" for="not know">Не знаю (Нужен ваш совет)</label>
+            <li class="programm__field programm__field--diet">
+              <input class="programm__input programm__input--diet visually-hidden" type="radio" id="not-know"
+                name="group-weight">
+              <label class="programm__label programm__label--diet" for="not-know">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="programm__info programm__info--data">
-          <legend class="programm__info-title">Контактные данные (владельца кота)</legend>
-          <ul class="programm__list">
-            <li class="programm__data">
-              <label class="programm__data-label" for="mail">E-mail:<sup>*</sup></label>
-              <input class="programm__data-input" type="text" id="mail" name="mail" placeholder="kuklachev@gmail.com">
+          <legend class="programm__info-title programm__info-title--data">Контактные данные (владельца кота)</legend>
+          <ul class="programm__list programm__list--data">
+            <li class="programm__field">
+              <label class="programm__label programm__label--mail" for="mail">E&nbsp;-&nbsp;mail:<sup>*</sup></label>
+              <input class="programm__input programm__input--mail" type="text" id="mail" name="Email"
+                placeholder="kuklachev@gmail.com">
             </li>
-            <li class="programm__data-data">
-              <label class="programm__data-label" for="phone">Телефон:<sup>*</sup></label>
-              <input class="programm__data-input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+            <li class="programm__field">
+              <label class="programm__label programm__label--phone" for="phone">Телефон:<sup>*</sup></label>
+              <input class="programm__input programm__input--phone" type="text" id="phone" name="phone"
+                placeholder="8 (960) 900-60-90">
             </li>
           </ul>
         </fieldset>
         <fieldset class="programm__info programm__info--comment">
           <legend class="programm__info-title">Комментарий</legend>
-          <div class="programm__comment">
-            <label class="programm__comment-label visually-hidden" for="textarea">Текст письма:</label>
-            <textarea class="programm__comment-textarea" name="" id="textarea" name="textarea" cols="30" rows="5"
+          <div class="programm__field programm__field--comment">
+            <label class="visually-hidden" for="textarea">Текст письма:</label>
+            <textarea class="programm__input programm__input--comment" id="textarea" name="textarea" cols="30" rows="5"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
         <fieldset class="programm__info programm__info--extra">
-          <legend class="programm__info-title">Дополнительно</legend>
-          <ul class="programm__list">
-            <li class="programm__extra">
-              <input class="programm__extra-input visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
-              <label class="programm__extra-label" for="sweetener">сахарозаменитель</label>
+          <legend class="programm__info-title programm__info-title--extra">Дополнительно</legend>
+          <ul class="programm__list programm__list--extra">
+            <li class="programm__field programm__field--extra">
+              <input class="programm__input programm__input--extra visually-hidden" type="checkbox" id="sweetener"
+                name="sweetener" checked>
+              <label class="programm__label programm__label--extra" for="sweetener">сахарозаменитель</label>
             </li>
-            <li class="programm__extra">
-              <input class="visually-hidden" type="checkbox" id="water" name="water">
-              <label class="programm__extra-label" for="water">питьевая вода</label>
+            <li class="programm__field programm__field--extra">
+              <input class="programm__input programm__input--extra visually-hidden" type="checkbox" id="water"
+                name="water">
+              <label class="programm__label programm__label--extra" for="water">питьевая вода</label>
             </li>
-            <li class="programm__extra">
-              <input class="visually-hidden" type="checkbox" id="milk" name="milk">
-              <label class="programm__extra-label" for="milk">молоко</label>
+            <li class="programm__field programm__field--extra">
+              <input class="programm__input programm__input--extra visually-hidden" type="checkbox" id="milk"
+                name="water">
+              <label class="programm__label programm__label--extra" for="milk">молоко</label>
             </li>
-            <li class="programm__extra">
-              <input class="visually-hidden" type="checkbox" id="vitamins" name="vitamins">
-              <label class="programm__extra-label" for="vitamins">витамины</label>
+            <li class="programm__field programm__field--extra">
+              <input class="programm__input programm__input--extra visually-hidden" type="checkbox" id="vitamins"
+                name="vitamins">
+              <label class="programm__label programm__label--extra" for="vitamins">витамины</label>
             </li>
           </ul>
         </fieldset>
-        <button class="programm-button button button--green" type="submit">отправить заявку</button>
+        <div class="programm__container-button">
+          <button class="programm__button button button--green" type="submit">отправить заявку</button>
+          <small class="programm__text-small"><sup>*</sup> — Обязательные поля</small>
+        </div>
       </form>
-      <small class="programm__text"><sup>*</sup> — Обязательные поля</small>
     </section>
-</main>
-<footer class="page__footer footer">
-  <div class="footer__cooperation">
-    <p class="footer__text">приглашаем к сотрудничеству дилеров!</p>
-    <p class="footer__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-  </div>
-  <div class="footer__map">
-    <iframe class="footer__iframe"
-      src="https://yandex.ru/map-widget/v1/?um=constructor%3A3993b2eae56783a7ec18ef27754b192f34c91cda61448cd94b8d2c8ccc37fada&amp;source=constructor"
-      width="100%" height="400" frameborder="0"></iframe>
-    <img class="visually-hidden" src="img/map/map-mobil.jpg" alt="">
-  </div>
-  <div class="footer__bottom">
-    <a class="footer__logo" href="index.html">
-      <svg class="footer__svg" role="img" aria-label="Логотип магазина Cat Energy">
-        <use xlink:href="icons/stack.svg#header--logo-text"></use>
-      </svg>
-    </a>
-    <ul class="footer__social">
-      <li class="footer__item">
-        <a class="footer__social-link" href="#">
-          <span class="visually-hidden">Мы вконтакте</span>
-        </a>
-      </li>
-      <li class="footer__item">
-        <a class="footer__social-link" href="#">
-          <span class="visually-hidden">Мы в Инстаграме</span>
-        </a>
-      </li>
-      <li class="footer__item">
-        <a class="footer__social-link" href="#">
-          <span class="visually-hidden">Мы в Фейсбуке</span>
-        </a>
-      </li>
-    </ul>
-    <div class="footer__copyright">
-      <a class="footer__text-Academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <a class="footer__logo-Academy" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="footer__svg-logo-Academy" role="img" width="27" height="34" aria-label="Логотип HTMLAcademy">
-          <use xlink:href="icons/stack.svg#footer-lcon--footer-logo-htmlacademy"></use>
+  </main>
+  <footer class="page__footer footer">
+    <div class="footer__cooperation">
+      <p class="footer__text">приглашаем к сотрудничеству дилеров!</p>
+      <p class="footer__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    </div>
+    <div class="footer__map">
+      <iframe class="footer__iframe"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A3993b2eae56783a7ec18ef27754b192f34c91cda61448cd94b8d2c8ccc37fada&amp;source=constructor"
+        width="100%" height="400" frameborder="0"></iframe>
+      <img class="visually-hidden" src="img/map/map-mobil.jpg" alt="">
+    </div>
+    <div class="footer__bottom">
+      <a class="footer__logo" href="index.html">
+        <svg class="footer__svg" role="img" aria-label="Логотип магазина Cat Energy">
+          <use xlink:href="icons/stack.svg#header--logo-text"></use>
         </svg>
       </a>
+      <ul class="footer__social">
+        <li class="footer__item">
+          <a class="footer__social-link" href="#">
+            <span class="visually-hidden">Мы вконтакте</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__social-link" href="#">
+            <span class="visually-hidden">Мы в Инстаграме</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__social-link" href="#">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__copyright">
+        <a class="footer__text-Academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="footer__logo-Academy" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="footer__svg-logo-Academy" role="img" width="27" height="34" aria-label="Логотип HTMLAcademy">
+            <use xlink:href="icons/stack.svg#footer-lcon--footer-logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 
