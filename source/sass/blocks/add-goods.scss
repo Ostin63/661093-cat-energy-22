@@ -1,5 +1,7 @@
 .add-goods {
-  padding: 25px 20px 35px;
+  padding: 25px 0 35px;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
 }
 
 .add-goods__title-block {
@@ -9,12 +11,14 @@
   line-height: 24px;
   font-family: $font-oswald;
   color: var(--basic-black);
+  grid-column: 2 / 3;
 }
 
 .add-goods__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  grid-column: 2 / 3;
 }
 
 .add-goods__item {
@@ -56,6 +60,7 @@
   height: auto;
   padding-top: 39px;
   border-top: $border-catalog;
+  grid-column: 2 / 3;
 }
 
 .present__background {
