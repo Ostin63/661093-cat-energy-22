@@ -3,15 +3,20 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-  <header class="page-header header">
+  <header class="page-header page__header--index header">
     <a class="header__logo">
+      <picture>
+      <source media="(min-width: 1440px)" srcset="icons/logo-desktop.svg">
+      <source media="(min-width: 768px)" srcset="icons/logo-tablet.svg">
       <img src="icons/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
+    </picture>
     </a>
     <a class="header__logo-text">
       <img src="icons/logo-text.svg" width="101" height="18" alt="Логотип магазина Cat Energy">
@@ -19,7 +24,7 @@
     <button class="header__menu-toggle header__menu-toggle--active">
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <ul class="navigation navigation--active">
+    <ul class="header__navigation navigation navigation--active">
       <li class="navigation__item">
         <a class="navigation__link">главная</a>
       </li>
