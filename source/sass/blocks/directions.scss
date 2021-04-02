@@ -1,5 +1,14 @@
 .directions {
+  padding-bottom: 27px;
   background: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 71px;
+  }
 }
 
 .directions__list {
@@ -10,6 +19,15 @@
   grid-template-columns: 20px 1fr 20px;
   grid-template-rows: repeat(2, max-content);
   grid-row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 30px 1fr 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr repeat(2, 245px) 1fr;
+    grid-column-gap: 80px;
+  }
 }
 
 .directions__item {
@@ -18,6 +36,26 @@
   list-style: none;
   background: var(--basic_grey);
   grid-column: 2 / -2;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 28px 53px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 570px;
+    padding-right: 51px;
+
+    &--down {
+      grid-column: 1 / 3;
+      justify-self: end;
+      margin-left: 110px;
+    }
+
+    &--up {
+      grid-column: 3 / -1;
+      margin-right: 110px;
+    }
+  }
 }
 
 .directions__title {
@@ -31,7 +69,22 @@
   line-height: 37px;
   font-family: $font-oswald;
 
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    text-align: center;
+  }
+
   &--icon-down {
+    @media (min-width: $desktop-width) {
+      min-width: 370px;
+    }
+
     &::before {
       position: absolute;
       content: "";
@@ -42,10 +95,28 @@
       background: url("../img/directions/cat-back.svg") 50% 50% no-repeat;
       background-size: cover;
       z-index: 1;
+
+      @media (min-width: $tablet-width) {
+        width: 200px;
+        height: 210px;
+        left: calc(100% - 234px);
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 100px;
+        height: 106px;
+        left: 0;
+        top: -36px;
+
+      }
     }
   }
 
   &--icon-up {
+    @media (min-width: $desktop-width) {
+      min-width: 439px;
+    }
+
     &::before {
       position: absolute;
       content: "";
@@ -54,6 +125,20 @@
       width: 67px;
       height: 50px;
       background: url("../img/directions/cat-back-up.svg") 50% 50% no-repeat;
+      background-size: cover;
+
+      @media (min-width: $tablet-width) {
+        width: 268px;
+        height: 200px;
+        left: calc(100% - 268px);
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 130px;
+        height: 100px;
+        top: -30px;
+        left: -19px;
+      }
     }
   }
 }
@@ -65,6 +150,18 @@
 
   &--padding {
     padding-right: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+    margin-right: 262px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 73px;
+    margin-right: 0;
   }
 }
 
@@ -81,6 +178,16 @@
   font-family: $font-oswald;
   text-transform: uppercase;
   color: var(--basic-black);
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 
   &--arrow {
     &::after {
