@@ -1,6 +1,37 @@
 .demo {
   padding: 27px 20px 25px;
   background: var(--gray-background);
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 43px;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 130px) 1fr;
+    grid-column-gap: 30px;
+    grid-template-rows: 60px 81px 77px 653px;
+    grid-row-gap: 54px;
+    background: var(--basic-white);
+    border-top: $border-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    border-top: none;
+    grid-template-columns: 1fr repeat(2, 245px) 1fr;
+    grid-column-gap: 80px;
+    grid-template-rows: 194px 96px 227px;
+    grid-row-gap: 69px;
+
+    &::before {
+      width: 100%;
+      height: 462px;
+      margin-top: -69px;
+      content: "";
+      grid-column: 1 / -1;
+      grid-row: 2 / -1;
+      background: var(--gray-background);
+    }
+  }
 }
 
 .demo__title {
@@ -9,12 +40,47 @@
   font-size: 36px;
   line-height: 40px;
   font-family: $font-oswald;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 66px;
+    margin-right: 245px;
+    justify-self: end;
+    grid-column: 1 / 3;
+  }
 }
 
 .demo__text {
   margin: 0;
   margin-top: 33px;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 13px;
+    margin-bottom: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    line-height: 24px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 436px;
+    margin-top: 1px;
+    margin-right: 132px;
+    padding: 0;
+    justify-self: end;
+    grid-column: 1 / 3;
+  }
 }
 
 .demo__list {
@@ -24,6 +90,28 @@
   grid-template-columns: 1fr 78px 1fr 78px 1fr;
   grid-template-rows: 70px 20px;
   grid-row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 42px;
+    grid-template-rows: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 366px;
+    margin-right: 204px;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-template-rows: 77px 20px;
+    grid-row-gap: 55px;
+    justify-self: end;
+    grid-column: 1 / 3;
+  }
 }
 
 .demo__item {
@@ -35,10 +123,22 @@
 
   &--weight {
     grid-column: 1 / 3;
+
+    @media (min-width: $tablet-width) {
+      width: 162px;
+      height: 77px;
+      grid-column: 1 / 2;
+    }
   }
 
   &--time {
     grid-column: 4 / 6;
+
+    @media (min-width: $tablet-width) {
+      width: 162px;
+      height: 77px;
+      grid-column: 2 / 3;
+    }
   }
 }
 
@@ -56,6 +156,13 @@
   color: var(--basic-black);
   order: 0;
 
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    padding-top: 15px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -65,6 +172,11 @@
     left: 0;
     background: url("../img/demo/weight-back.svg") 0% 50% no-repeat;
     background-size: cover;
+
+    @media (min-width: $tablet-width) {
+      width: 162px;
+      height: 77px;
+    }
   }
 }
 
@@ -79,6 +191,13 @@
   font-family: $font-arial;
   color: var(--special_dark-grey);
   order: 1;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .demo__item-cost {
@@ -86,6 +205,20 @@
   justify-content: space-between;
   grid-column: 2 / -2;
   grid-row: 2 / -1;
+
+  @media (min-width: $tablet-width) {
+    margin-left: -40px;
+    align-self: center;
+    flex-wrap: wrap;
+    grid-column: 4 / -1;
+    grid-row: 1 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+  }
 }
 
 .demo__cost-title {
@@ -96,6 +229,10 @@
     position: absolute;
     content: ":";
     right: -4px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: -50px;
   }
 }
 
@@ -110,4 +247,34 @@
   text-transform: uppercase;
   font-family: $font-oswald;
   color: var(--basic-black);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.demo__cost-value {
+  @media (min-width: $tablet-width) {
+    margin-left: 85px;
+    margin-top: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin: 0 auto;
+  }
+}
+
+.demo__slider {
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3 / -1;
+    grid-row: 1 / -1;
+  }
 }
