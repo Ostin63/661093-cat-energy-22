@@ -4,6 +4,21 @@
   grid-template-columns: 20px 1fr 20px;
   grid-template-rows: 138px 164px 138px 40px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 64px;
+    grid-template-columns: 1fr repeat(2, 130px) 1fr;
+    grid-template-rows: 200px 609px;
+    grid-column-gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 82px;
+    grid-template-columns: 1fr repeat(2, 245px) 1fr;
+    grid-column-gap: 80px;
+    grid-template-rows: 141px 82px 180px 52px 239px;
+  }
+
   &::before {
     content: "";
     background-image: url("../img/promo/background-mobile.jpg");
@@ -13,6 +28,20 @@
     grid-column: 1 / -1;
     grid-row: 1 / 3;
     z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      background-image: none;
+      background-image: url("../img/promo/background-desktop.jpg");
+      height: 694px;
+      grid-column: 3/ -1;
+      grid-row: 1 / -1;
+      margin-left: -40px;
+    }
   }
 
   &::after {
@@ -22,6 +51,18 @@
     grid-column: 1 / -1;
     grid-row: 1 / 3;
     z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      height: 694px;
+      grid-column: 3/ -1;
+      grid-row: 1 / -1;
+      margin-left: -40px;
+    }
   }
 }
 
@@ -30,6 +71,18 @@
   color: var(--basic-white);
   grid-column: 2/ -2;
   grid-row: 1 / 2;
+
+  @media (min-width: $tablet-width) {
+    margin-left: -100px;
+    text-align: left;
+    color: var(--basic-black);
+    grid-column: 2 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -240px;
+    grid-row: 3 / 4;
+  }
 }
 
 .promo__title {
@@ -39,6 +92,14 @@
   font-size: 36px;
   line-height: 36px;
   font-family: $font-oswald;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 60px;
+    font-family: $font-oswald;
+  }
 }
 
 .promo__slogan {
@@ -48,6 +109,15 @@
   line-height: 14px;
   font-family: $font-oswald;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 41px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--basic-black);
+    font-family: $font-oswald;
+  }
 }
 
 .promo__image {
@@ -55,10 +125,40 @@
   justify-self: center;
   grid-column: 1 / -1;
   grid-row: 2 / -2;
+
+  @media (min-width: $tablet-width) {
+    width: 709px;
+    height: 609px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 499px;
+    grid-column: 2 / 4;
+    grid-row: 2 / -1;
+    justify-self: start;
+    margin-left: 125px;
+  }
 }
 
 .promo__button {
   font-size: 14px;
   line-height: 18px;
   grid-column: 2 / 3;
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+    height: 54px;
+    margin-top: 29px;
+    margin-left: -100px;
+    grid-row: 2 / 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -240px;
+    margin-top: 0;
+    grid-row: 2 / 3;
+    grid-row: 5 / -1;
+  }
 }

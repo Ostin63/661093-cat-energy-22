@@ -25,18 +25,18 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <ul class="header__navigation navigation navigation--active">
-      <li class="navigation__item">
+      <li class="navigation__item navigation__item--active navigation__item--active-white navigation__item--white">
         <a class="navigation__link">главная</a>
       </li>
-      <li class="navigation__item">
+      <li class="navigation__item navigation__item--white">
         <a class="navigation__link" href="catalog.html">каталог продукции</a>
       </li>
-      <li class="navigation__item">
+      <li class="navigation__item navigation__item--white">
         <a class="navigation__link" href="form.html">подбор программы</a>
       </li>
     </ul>
   </header>
-  <main class="page__main">
+  <main class="page__main page__main page__main--index">
     <h1 class="visually-hidden">Питание для котов</h1>
     <section class="promo">
       <div class="promo__lemma">
@@ -44,7 +44,11 @@
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
       </div>
       <div class="promo__image">
-        <img src="img/promo/can-mobile.png" alt="">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/promo/can.png">
+          <source media="(min-width: 768px)" srcset="img/promo/can-tablet.png">
+          <img src="img/promo/can-mobile.png" alt="">
+        </picture>
       </div>
       <a class="promo__button button button--green" href="#">подобрать программу</a>
     </section>
