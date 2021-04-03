@@ -4,13 +4,13 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 82px;
-    background: var(--basic-white);
-    background: linear-gradient(180deg, var(--basic-white) 205px, var(--gray-background) 205px);
+    background: var(--linear-gradient);
   }
 
   @media (min-width: $desktop-width) {
     width: 600px;
     padding-top: 0;
+    background: none;
   }
 }
 
@@ -116,7 +116,7 @@
   padding: 0;
   border: none;
   color: var(--basic-green);
-  background: url("../img/demo/range-button.svg") 50% 50% no-repeat;
+  background: url("../icons/stack.svg#demo--weight-back") 50% 50% no-repeat;
   background-size: cover;
 
   @media (min-width: $tablet-width) {
