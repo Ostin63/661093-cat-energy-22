@@ -128,6 +128,8 @@
       width: 162px;
       height: 77px;
       grid-column: 1 / 2;
+      border-radius: 3px;
+      border: $border-grey;
     }
   }
 
@@ -138,6 +140,8 @@
       width: 162px;
       height: 77px;
       grid-column: 2 / 3;
+      border-radius: 3px;
+      border: $border-grey;
     }
   }
 }
@@ -148,6 +152,8 @@
   height: 56px;
   margin-left: 0;
   padding-top: 14px;
+  border-radius: 3px;
+  border: $border-grey;
   text-align: center;
   font-weight: normal;
   font-size: 24px;
@@ -161,27 +167,12 @@
     padding-top: 15px;
     font-size: 30px;
     line-height: 37px;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 124px;
-    height: 56px;
-    top: 0;
-    left: 0;
-    background: url("../img/demo/weight-back.svg") 0% 50% no-repeat;
-    background-size: cover;
-
-    @media (min-width: $tablet-width) {
-      width: 162px;
-      height: 77px;
-    }
+    border: none;
   }
 }
 
 .demo__table-title {
-  width: 70px;
+  width: 80px;
   margin: 0 auto;
   margin-top: -10px;
   text-align: center;
@@ -191,12 +182,28 @@
   font-family: $font-arial;
   color: var(--special_dark-grey);
   order: 1;
+  border-radius: 3px;
+  background: var(--gray-background);
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
-    width: 100%;
+    width: 85px;
     margin-top: 15px;
     font-size: 14px;
     line-height: 14px;
+    background: var(--basic-white);
+
+    &--time {
+      width: 142px;
+    }
+
+    &--weight {
+      width: 115px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background: var(--gray-background);
   }
 }
 
