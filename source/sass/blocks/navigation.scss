@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-left: 55px;
+    padding-left: 74px;
     display: grid;
     grid-template-columns: repeat(3, max-content);
     grid-column-gap: 35px;
@@ -25,6 +25,7 @@
 
   @media (min-width: $desktop-width) {
     height: 60px;
+    margin-top: -2px;
     padding-left: 90px;
     grid-column: 3 / -1;
   }
@@ -32,7 +33,7 @@
 
 .navigation__item {
   list-style: none;
-  height: 66px;
+  height: 65px;
   border-top: $border-gray;
   text-transform: uppercase;
   font-size: 20px;
@@ -53,7 +54,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    height: 48px;
+    height: 52px;
     border: none;
     font-weight: normal;
     font-size: 18px;
@@ -74,7 +75,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 60px;
+    height: 52px;
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
@@ -89,4 +90,8 @@
   margin-top: -2px;
   text-decoration: none;
   color: inherit;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 6px;
+  }
 }
