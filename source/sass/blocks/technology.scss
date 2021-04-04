@@ -12,7 +12,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 47px;
+    padding-bottom: 0;
     grid-template-columns: 1fr repeat(2, 245px) 1fr;
     grid-column-gap: 80px;
   }
@@ -32,7 +32,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 191px;
+    margin-right: 195px;
     justify-self: end;
     grid-column: 1 / 3;
   }
@@ -119,7 +119,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 0;
+    margin-right: 15px;
+
+    &::after {
+      right: 0;
+    }
 
     &--food {
       width: 230px;
@@ -258,5 +262,10 @@
         background-size: 70px 70px, 60px 60px;
       }
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    padding-top: 1px;
   }
 }
