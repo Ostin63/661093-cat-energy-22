@@ -19,7 +19,7 @@
     <button class="header__menu-toggle header__menu-toggle--active">
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <ul class="navigation navigation--active">
+    <ul class="header__navigation navigation navigation--active">
       <li class="navigation__item">
         <a class="navigation__link" href="index.html">главная</a>
       </li>
@@ -76,12 +76,12 @@
         <fieldset class="programm__info programm__info--data">
           <legend class="programm__info-title programm__info-title--data">Контактные данные (владельца кота)</legend>
           <ul class="programm__list programm__list--data">
-            <li class="programm__field">
+            <li class="programm__field programm__field--mail">
               <label class="programm__label programm__label--mail" for="mail">E&nbsp;-&nbsp;mail:<sup>*</sup></label>
               <input class="programm__input programm__input--mail" type="text" id="mail" name="Email"
                 placeholder="kuklachev@gmail.com">
             </li>
-            <li class="programm__field">
+            <li class="programm__field programm__field--phone">
               <label class="programm__label programm__label--phone" for="phone">Телефон:<sup>*</sup></label>
               <input class="programm__input programm__input--phone" type="text" id="phone" name="phone"
                 placeholder="8 (960) 900-60-90">
@@ -128,7 +128,7 @@
       </form>
     </section>
   </main>
-  <footer class="page__footer footer">
+  <footer class="page__footer footer footer--catalog">
     <div class="footer__cooperation">
       <p class="footer__text">приглашаем к сотрудничеству дилеров!</p>
       <p class="footer__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
