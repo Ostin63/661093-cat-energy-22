@@ -48,6 +48,10 @@
   }
 }
 
+.footer__text-correction {
+  line-height: 24px;
+}
+
 .footer__adress {
   width: 50%;
   margin: 0;
@@ -109,7 +113,7 @@
 
 .footer__logo {
   width: 100%;
-  padding-top: 39px;
+  padding-top: 38px;
   text-align: center;
   border-bottom: $border-grey-1;
 
