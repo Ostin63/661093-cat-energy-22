@@ -44,7 +44,7 @@
   @media (min-width: $tablet-width) {
     width: 171px;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 25px;
   }
 }
 
@@ -63,6 +63,7 @@
 
   @media (min-width: $tablet-width) {
     width: 159px;
+    text-align: right;
     margin-top: -4px;
     font-size: 16px;
     line-height: 20px;
@@ -100,7 +101,7 @@
   @media (min-width: $tablet-width) {
     padding: 0 30px;
     grid-template-columns: 128px 1fr 163px;
-    grid-template-rows: auto;
+    grid-template-rows: 150px;
   }
 
   @media (min-width: $desktop-width) {
@@ -118,6 +119,7 @@
   border-bottom: $border-grey-1;
 
   @media (min-width: $tablet-width) {
+    padding-top: 58px;
     border-bottom: none;
   }
 
@@ -151,6 +153,9 @@
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
+    margin: 0;
+    padding-top: 71px;
+    height: 34px;
     padding-left: 156px;
     padding-right: 131px;
     border-bottom: none;
@@ -207,6 +212,7 @@
 
   @media (min-width: $desktop-width) {
     width: 245px;
+    height: 34px;
     padding-left: 80px;
     grid-column: -2 / -1;
   }
@@ -218,10 +224,18 @@
   line-height: 18px;
   color: var(--special_dark-grey);
   font-family: $font-arial;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -8px;
+  }
 }
 
 .footer__logo-Academy {
   display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -4px;
+  }
 }
 
 .footer__svg-logo-Academy {

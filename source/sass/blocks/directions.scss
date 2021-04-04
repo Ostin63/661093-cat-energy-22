@@ -3,7 +3,7 @@
   background: var(--basic-white);
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 45px;
+    padding-bottom: 46px;
   }
 
   @media (min-width: $desktop-width) {
@@ -22,6 +22,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 30px 1fr 30px;
+    grid-row-gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -38,7 +39,7 @@
   grid-column: 2 / -2;
 
   @media (min-width: $tablet-width) {
-    padding: 77px 28px 53px 52px;
+    padding: 78px 28px 36px 53px;
   }
 
   @media (min-width: $desktop-width) {
@@ -70,7 +71,7 @@
   font-family: $font-oswald;
 
   @media (min-width: $tablet-width) {
-    margin-left: 0;
+    margin: 0;
     font-size: 36px;
     line-height: 36px;
   }
@@ -99,6 +100,7 @@
       @media (min-width: $tablet-width) {
         width: 200px;
         height: 210px;
+        top: 0;
         left: calc(100% - 234px);
       }
 
@@ -129,7 +131,8 @@
       @media (min-width: $tablet-width) {
         width: 268px;
         height: 200px;
-        left: calc(100% - 268px);
+        top: 15px;
+        left: calc(100% - 270px);
       }
 
       @media (min-width: $desktop-width) {
@@ -149,11 +152,15 @@
 
   &--padding {
     padding-right: 10px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 30px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     margin-top: 24px;
-    margin-right: 262px;
+    margin-right: 255px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -179,6 +186,7 @@
   color: var(--basic-black);
 
   @media (min-width: $tablet-width) {
+    margin-top: 35px;
     border-top: none;
     font-size: 20px;
     line-height: 30px;
@@ -200,6 +208,11 @@
       background: url("../img/directions/arrow.svg") 50% 50% no-repeat;
       background-size: cover;
       box-sizing: border-box;
+
+      @media (min-width: $tablet-width) {
+        margin-top: 0;
+        margin-left: 24px;
+      }
     }
 
     &:hover {

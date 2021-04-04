@@ -4,11 +4,11 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    padding-top: 43px;
+    padding-top: 42px;
     display: grid;
     grid-template-columns: 1fr repeat(2, 130px) 1fr;
     grid-column-gap: 30px;
-    grid-template-rows: 60px 81px 77px 653px;
+    grid-template-rows: 60px 81px 77px 658px;
     grid-row-gap: 54px;
     background: var(--basic-white);
     border-top: $border-grey;
@@ -42,6 +42,7 @@
   font-family: $font-oswald;
 
   @media (min-width: $tablet-width) {
+    margin-right: 14px;
     font-size: 60px;
     line-height: 60px;
     grid-column: 1 / 3;
@@ -63,10 +64,10 @@
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 13px;
+    margin-top: 11px;
     margin-bottom: 0;
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 50px;
     font-size: 16px;
     line-height: 24px;
     grid-column: 1 / -1;
@@ -126,7 +127,7 @@
 
     @media (min-width: $tablet-width) {
       width: 162px;
-      height: 77px;
+      height: 72px;
       grid-column: 1 / 2;
       border-radius: 3px;
       border: $border-grey;
@@ -139,7 +140,8 @@
 
     @media (min-width: $tablet-width) {
       width: 162px;
-      height: 77px;
+      height: 72px;
+      margin-left: -1px;
       grid-column: 2 / 3;
       border-radius: 3px;
       border: $border-grey;
@@ -189,7 +191,7 @@
 
   @media (min-width: $tablet-width) {
     width: 85px;
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 14px;
     line-height: 14px;
     background: var(--basic-white);
@@ -215,7 +217,8 @@
   grid-row: 2 / -1;
 
   @media (min-width: $tablet-width) {
-    margin-left: -40px;
+    margin-top: -6px;
+    margin-left: -45px;
     align-self: center;
     flex-wrap: wrap;
     grid-column: 4 / -1;
@@ -264,9 +267,10 @@
 
 .demo__cost-value {
   margin-left: 7px;
+
   @media (min-width: $tablet-width) {
     margin-left: 85px;
-    margin-top: 9px;
+    padding-top: 9px;
   }
 
   @media (min-width: $desktop-width) {
@@ -276,7 +280,6 @@
 
 .demo__slider {
   @media (min-width: $tablet-width) {
-    padding-top: 0;
     grid-column: 1 / -1;
     grid-row: 4 / -1;
   }
