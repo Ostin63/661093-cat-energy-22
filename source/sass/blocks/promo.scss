@@ -144,9 +144,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 552px;
-    margin-top: 1px;
-    margin-left: 150px;
+    width: 515px;
+    margin-top: 0;
+    margin-left: 160px;
     grid-column: 2 / 4;
     grid-row: 2 / -1;
     justify-self: start;
@@ -169,7 +169,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: -240px;
+    margin-left: -245px;
     margin-top: 0;
     grid-row: 5 / -1;
   }
