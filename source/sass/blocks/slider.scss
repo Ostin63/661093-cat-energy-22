@@ -15,7 +15,9 @@
 }
 
 .slider__img {
-  max-width: 311px;
+  width: 100%;
+  height: auto;
+  padding-right: 43px;
   margin: 0 auto;
   display: none;
 
@@ -38,6 +40,7 @@
 }
 
 .slider__range {
+  margin-top: 20px;
   padding-left: 27px;
   padding-right: 25px;
   display: grid;
@@ -89,8 +92,8 @@
 .slider__bar {
   position: relative;
   height: 14px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
   align-self: center;
   display: flex;
   flex-direction: column;
