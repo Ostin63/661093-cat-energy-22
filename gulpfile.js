@@ -44,9 +44,7 @@ const svgstacke = () => {
   return src("source/img/**/*.svg")
     .pipe(svgsprite({
       mode: {
-        stack: {
-          bust: false
-        }
+        stack: {}
       }
     }))
     .pipe(imagemin([
