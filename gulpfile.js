@@ -40,7 +40,7 @@ exports.logo = logo;
 
 // Svg stack
 
-const svgstacke = () => {
+const svgstack = () => {
   return src("source/img/**/*.svg")
     .pipe(svgsprite({
       mode: {
@@ -54,7 +54,7 @@ const svgstacke = () => {
     .pipe(dest("source/icons"));
 }
 
-exports.svgstacke = svgstacke;
+exports.svgstack = svgstack;
 
 // Server
 
@@ -77,7 +77,7 @@ exports.server = server;
 const watcher = () => {
   watch("source/sass/**/*.scss", series("styles"));
   watch("source/*.html").on("change", sync.reload);
-  watch("source/img/**/*.svg", series(svgstacke));
+  watch("source/img/**/*.svg", series(svgstack));
   watch("source/img/logo/*.svg", series(logo));
 }
 
@@ -85,6 +85,6 @@ exports.default = series(
   styles,
   server,
   watcher,
-  svgstacke,
+  svgstack,
   logo
 );
