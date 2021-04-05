@@ -79,7 +79,7 @@
   border-bottom: $border-catalog;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
+    padding: 0;
     border-bottom: none;
     grid-template-columns: 36px 1fr 36px;
     grid-template-rows: 73px 127px 37px 99px 91px;
