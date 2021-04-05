@@ -47,9 +47,6 @@ const svgstack = () => {
         stack: {}
       }
     }))
-    .pipe(imagemin([
-      imagemin.svgo()
-    ]))
     .pipe(rename("stack.svg"))
     .pipe(dest("source/icons"));
 }
