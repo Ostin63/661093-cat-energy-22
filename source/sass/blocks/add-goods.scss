@@ -1,5 +1,7 @@
 .add-goods {
-  padding: 25px 20px 35px;
+  padding: 25px 0 35px;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
 }
 
 .add-goods__title-block {
