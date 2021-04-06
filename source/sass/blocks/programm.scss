@@ -508,7 +508,7 @@
 .error {
   border: $border-error;
 
-  + .programm__input-icon {
+  +.programm__input-icon {
     fill: var(--error);
   }
 }
