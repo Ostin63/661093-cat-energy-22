@@ -225,7 +225,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &--data,
     &--comment,
     &--extra {
@@ -461,8 +460,8 @@
     }
   }
 
-  &:disabled+.programm__label,
-  &:disabled+.programm__label::before {
+  &:disabled + .programm__label,
+  &:disabled + .programm__label::before {
     opacity: 0.3;
   }
 
@@ -488,7 +487,7 @@
     }
   }
 
-  &--diet:checked+.programm__label--diet::before {
+  &--diet:checked + .programm__label--diet::before {
     width: 30px;
     height: 30px;
     background: url("../icons/stack.svg#form--radio-active") 50% 50% no-repeat;
@@ -500,7 +499,7 @@
     }
   }
 
-  &--extra:checked+.programm__label--extra::before {
+  &--extra:checked + .programm__label--extra::before {
     background: url("../icons/stack.svg#form--tick") 50% 50% no-repeat;
     background-size: cover;
   }
@@ -509,7 +508,7 @@
 .error {
   border: $border-error;
 
-  +.programm__input-icon {
+  + .programm__input-icon {
     fill: var(--error);
   }
 }
