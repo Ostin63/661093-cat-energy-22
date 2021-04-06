@@ -22,6 +22,9 @@
   --green-85: rgba(104, 183, 56, 0.85);
   --error: #ff8282;
   --linear-gradient: linear-gradient(180deg, var(--basic-white) 197px, var(--gray-background) 197px);
+  --shadow-16: 0 1px 3px var(--black-16);
+  --shadow-19: 0 2px 4px var(--black-19);
+  --shadow-20: 0 3px 5px var(--black-20);
 }
 
 //Viewports
@@ -36,6 +39,8 @@ $font-oswald: "Oswald", "Arial", sans-serif;
 
 // Border
 
+$border-black-24: 1px dotted var(--black-24);
+$border-black-40: 1px solid var(--black-40);
 $border-basic_grey: 2px solid var(--basic_grey);
 $border-gray: 1px solid var(--gray-bottom);
 $border-basic: 1px solid var(--basic-border);
@@ -46,3 +51,4 @@ $border-catalog: 1px solid var(--gray-catalog);
 $border-green: 2px solid var(--basic_green);
 $border-none: 2px solid var(--white-00);
 $border-white: 2px solid var(--basic-white);
+$border-error: 2px solid var(--error);
