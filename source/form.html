@@ -45,11 +45,11 @@
           <ul class="programm__list">
             <li class="programm__field">
               <label class="programm__label" for="name">Имя:<sup>*</sup></label>
-              <input class="programm__input" type="text" id="name" name="full-name" placeholder="барсик" required>
+              <input class="programm__input" type="text" id="name" name="full-name" placeholder="барсик">
             </li>
             <li class="programm__field">
               <label class="programm__label" for="weight">Вес&nbsp;(кг):<sup>*</sup></label>
-              <input class="programm__input" type="number" id="weight" name="weight" placeholder="7" required>
+              <input class="programm__input" type="number" id="weight" name="weight" placeholder="7">
             </li>
             <li class="programm__field">
               <label class="programm__label" for="age">Возраст&nbsp;(лет):</label>
@@ -78,22 +78,34 @@
           </ul>
         </fieldset>
         <fieldset class="programm__info programm__info--data">
-          <legend class="programm__info-title programm__info-title--data">Контактные данные (владельца кота)</legend>
+          <legend class="programm__info-title programm__info-title--data">
+            <span class="programm__info-title-name programm__info-title-name--data">Контактные&nbsp;данные
+              (владельца&nbsp;кота)</span>
+          </legend>
           <ul class="programm__list programm__list--data">
             <li class="programm__field programm__field--mail">
               <label class="programm__label programm__label--mail" for="mail">E&nbsp;-&nbsp;mail:<sup>*</sup></label>
               <input class="programm__input programm__input--mail" type="text" id="mail" name="Email"
                 placeholder="kuklachev@gmail.com">
+              <svg class="programm__input-icon programm__input-icon--mail" role="img" width="20" height="14"
+                aria-label="Логотип HTMLAcademy">
+                <use xlink:href="icons/stack.svg#form--email"></use>
+              </svg>
             </li>
             <li class="programm__field programm__field--phone">
               <label class="programm__label programm__label--phone" for="phone">Телефон:<sup>*</sup></label>
               <input class="programm__input programm__input--phone" type="text" id="phone" name="phone"
                 placeholder="8 (960) 900-60-90">
+              <svg class="programm__input-icon programm__input-icon--phone" role="img" width="20" height="14"
+                aria-label="Логотип HTMLAcademy">
+                <use xlink:href="icons/stack.svg#form--phone"></use>
+              </svg>
             </li>
           </ul>
         </fieldset>
         <fieldset class="programm__info programm__info--comment">
-          <legend class="programm__info-title">Комментарий</legend>
+          <legend class="programm__info-title programm__info-title--comment"><span
+              class="programm__info-title-name programm__info-title-name--comment">Комментарий</span></legend>
           <div class="programm__field programm__field--comment">
             <label class="visually-hidden" for="textarea">Текст письма:</label>
             <textarea class="programm__input programm__input--comment" id="textarea" name="textarea" cols="30" rows="5"
@@ -101,7 +113,8 @@
           </div>
         </fieldset>
         <fieldset class="programm__info programm__info--extra">
-          <legend class="programm__info-title programm__info-title--extra">Дополнительно</legend>
+          <legend class="programm__info-title programm__info-title--extra"><span
+              class="programm__info-title-name programm__info-title-name--extra">Дополнительно</span></legend>
           <ul class="programm__list programm__list--extra">
             <li class="programm__field programm__field--extra">
               <input class="programm__input programm__input--extra visually-hidden" type="checkbox" id="sweetener"
@@ -109,13 +122,11 @@
               <label class="programm__label programm__label--extra" for="sweetener">сахарозаменитель</label>
             </li>
             <li class="programm__field programm__field--extra">
-              <input class="programm__input programm__input--extra visually-hidden" type="checkbox" id="water"
-                name="water">
+              <input class="programm__input programm__input--extra visually-hidden" type="checkbox" id="water" name="water">
               <label class="programm__label programm__label--extra" for="water">питьевая вода</label>
             </li>
             <li class="programm__field programm__field--extra">
-              <input class="programm__input programm__input--extra visually-hidden" type="checkbox" id="milk"
-                name="water">
+              <input class="programm__input programm__input--extra visually-hidden" type="checkbox" id="milk" name="water">
               <label class="programm__label programm__label--extra" for="milk">молоко</label>
             </li>
             <li class="programm__field programm__field--extra">
