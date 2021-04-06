@@ -9,3 +9,31 @@ toggle.addEventListener("click", function () {
   toggle.classList.toggle("header__menu-toggle--active");
   navigation.classList.toggle("navigation--active");
 })
+
+// Form
+
+const programm = document.querySelector('.programm');
+
+let isStorageSupport = true;
+let storage = '';
+
+try {
+  storage = localStorage.getItem('phone');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+const programmForm = programm.querySelector('.programm__form');
+const fields = programmForm.querySelectorAll('.programm__input');
+
+programmForm.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  for (let i = 0; i < fields.length; i++) {
+    let field = fields[i];
+    if (!field.value) {
+      field.classList.add('error');
+    } else {
+      field.classList.remove('error');
+    }
+  }
+});
