@@ -30,7 +30,7 @@ jobs:
         run: npx gulp styles
 
       - name: stack
-        run: npx gulp svgstacke
+        run: npx gulp svgstack
 
       - name: Building
         run: npx gulp logo
