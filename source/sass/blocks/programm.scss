@@ -1,5 +1,5 @@
 .programm {
-  padding-top: 27px;
+  padding-top: 26px;
   background: var(--basic-white);
   display: grid;
   grid-template-columns: 1fr;
@@ -20,7 +20,7 @@
 }
 
 .programm__title {
-  margin-top: 27px;
+  margin-top: 0;
   padding-left: 20px;
   margin-bottom: 37px;
   font-weight: normal;
@@ -48,7 +48,6 @@
 }
 
 .programm__text {
-  width: 226px;
   margin: 0;
   padding-left: 20px;
   text-transform: uppercase;
@@ -79,7 +78,7 @@
 }
 
 .programm__form {
-  margin-top: 39px;
+  margin-top: 38px;
   padding-bottom: 32px;
   grid-column: 2 / -2;
 
@@ -443,9 +442,14 @@
   height: 46px;
   padding-left: 15px;
   border: $border-basic;
+  font-size: 16px;
+  line-height: 46px;
+  font-family: $font-oswald;
 
   @media (min-width: $tablet-width) {
     height: 52px;
+    font-size: 20px;
+    line-height: 52;
   }
 
   &:hover {
@@ -460,48 +464,53 @@
     }
   }
 
-  &:disabled + .programm__label,
-  &:disabled + .programm__label::before {
-    opacity: 0.3;
+  &:disabled {
+    +.programm__label,
+    +.programm__label::before {
+      opacity: 0.3;
+    }
   }
 
   &::placeholder {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 46px;
     font-family: $font-oswald;
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
-      line-height: 30px;
+      line-height: 52px;
     }
   }
 
   &--comment {
     height: 150px;
-    padding-top: 9px;
 
     @media (min-width: $tablet-width) {
       height: 174px;
     }
   }
 
-  &--diet:checked + .programm__label--diet::before {
-    width: 30px;
-    height: 30px;
-    background: url("../icons/stack.svg#form--radio-active") 50% 50% no-repeat;
-    background-size: cover;
+  &--diet:checked {
+    +.programm__label--diet::before {
+      width: 30px;
+      height: 30px;
+      background: url("../icons/stack.svg#form--radio-active") 50% 50% no-repeat;
+      background-size: cover;
 
-    @media (min-width: $tablet-width) {
-      width: 40px;
-      height: 40px;
+      @media (min-width: $tablet-width) {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
-  &--extra:checked + .programm__label--extra::before {
-    background: url("../icons/stack.svg#form--tick") 50% 50% no-repeat;
-    background-size: cover;
+  &--extra:checked {
+    +.programm__label--extra::before {
+      background: url("../icons/stack.svg#form--tick") 50% 50% no-repeat;
+      background-size: cover;
+    }
   }
 }
 
