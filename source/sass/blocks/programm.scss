@@ -5,7 +5,7 @@
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
-    padding-top: 64px;
+    padding-top: 65px;
     display: grid;
     grid-template-columns: 70px 1fr 70px;
   }
@@ -32,6 +32,8 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    margin-left: -1px;
+    padding-left: 0;
     font-size: 60px;
     line-height: 60px;
     grid-column: 2 / 3;
@@ -61,6 +63,8 @@
   @media (min-width: $tablet-width) {
     width: 323px;
     margin-top: 54px;
+    margin-left: -1px;
+    padding: 0;
     font-size: 20px;
     line-height: 30px;
     grid-column: 2 / 3;
@@ -85,6 +89,7 @@
   @media (min-width: $tablet-width) {
     margin-top: 0;
     padding-top: 66px;
+    padding-bottom: 73px;
     grid-column: 2 / 3;
   }
 
@@ -107,8 +112,24 @@
   border-bottom: $border-gray;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 72px;
+    padding-bottom: 54px;
     border-bottom: none;
+
+    &--diet {
+      padding-bottom: 72px;
+    }
+
+    &--data {
+      padding-bottom: 45px;
+    }
+
+    &--comment {
+      padding-bottom: 65px;
+    }
+
+    &--extra {
+      padding-bottom: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -165,6 +186,10 @@
       display: block;
       margin-left: 20px;
       background: var(--basic_green);
+
+      @media (min-width: $tablet-width) {
+        margin-left: 40px;
+      }
     }
   }
 
@@ -180,6 +205,10 @@
       display: block;
       margin-left: 22px;
       background: var(--basic_green);
+
+      @media (min-width: $tablet-width) {
+        margin-left: 40px;
+      }
     }
   }
 
@@ -195,6 +224,10 @@
       display: block;
       margin-left: 23px;
       background: var(--basic_green);
+
+      @media (min-width: $tablet-width) {
+        margin-left: 40px;
+      }
     }
   }
 
@@ -208,7 +241,7 @@
       padding-left: 0;
 
       &::after {
-        top: 24px;
+        top: 22px;
         margin-right: -70px;
       }
 
@@ -217,7 +250,7 @@
         content: "";
         width: 30px;
         height: 2px;
-        top: 24px;
+        top: 22px;
         display: block;
         left: -70px;
         background: var(--basic_green);
@@ -271,6 +304,14 @@
 
 .programm__info-title-name {
   grid-column: 2 / 4;
+
+  &--wrap {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .programm__list {
@@ -290,7 +331,7 @@
     padding-bottom: 5px;
 
     @media (min-width: $tablet-width) {
-      padding: 25px 30px 9px;
+      padding: 29px 30px 7px;
       border: $border-gray;
     }
   }
@@ -318,7 +359,9 @@
 
     @media (min-width: $tablet-width) {
       width: 100%;
-      margin-top: 76px;
+      margin-top: 62px;
+      padding-left: 0px;
+      padding-bottom: 17px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -346,13 +389,17 @@
   font-family: $font-oswald;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
     font-size: 20px;
     line-height: 30px;
   }
 
   &--diet {
     height: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 23px;
+    }
   }
 
   &--comment {
@@ -364,6 +411,7 @@
 
     @media (min-width: $tablet-width) {
       height: 174px;
+      margin-top: 76px;
       padding-left: 0;
       padding-right: 0;
     }
@@ -379,8 +427,8 @@
     padding-left: 48px;
 
     @media (min-width: $tablet-width) {
-      width: 314px;
-      margin-top: 32px;
+      width: 284px;
+      margin-bottom: 42px;
       padding-left: 60px;
     }
   }
@@ -405,14 +453,26 @@
   &--cat-name {
     margin-top: 0;
     margin-right: 16px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 3px;
+    }
   }
 
   &--cat-weight {
     margin-right: 18px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 3px;
+    }
   }
 
   &--cat-age {
     margin-right: 15px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 3px;
+    }
   }
 
   &--diet {
@@ -435,13 +495,24 @@
       @media (min-width: $tablet-width) {
         width: 40px;
         height: 40px;
+        left: -2px;
       }
     }
   }
 
   &--mail {
-    width: 68px;
     margin-right: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 3px;
+      margin-right: 19px;
+    }
+  }
+
+  &--phone {
+    @media (min-width: $tablet-width) {
+      margin-top: 5px;
+    }
   }
 
   &--extra {
@@ -464,11 +535,24 @@
   }
 }
 
+.programm__mail-text {
+  width: 45px;
+
+  @media (min-width: $tablet-width) {
+    width: 55px;
+  }
+}
+
 .programm__label-required {
   display: block;
   margin-top: 8px;
   margin-right: 0;
   line-height: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 15px;
+    margin-left: 1px;
+  }
 }
 
 .programm__input {
@@ -480,18 +564,28 @@
   line-height: 46px;
   font-family: $font-oswald;
 
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 52;
+  }
+
   &--cat-weight {
     padding-left: 14px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 21px;
+    }
   }
 
   &--cat-age {
     padding-left: 15px;
-  }
 
-  @media (min-width: $tablet-width) {
-    height: 52px;
-    font-size: 20px;
-    line-height: 52;
+    @media (min-width: $tablet-width) {
+      padding-left: 21px;
+    }
   }
 
   &:hover {
@@ -533,6 +627,10 @@
 
     &::placeholder {
       line-height: 18px;
+
+      @media (min-width: $tablet-width) {
+        line-height: 31px;
+      }
     }
 
     @media (min-width: $tablet-width) {
@@ -638,10 +736,13 @@
   font-family: $font-arial;
 
   @media (min-width: $tablet-width) {
-    width: 320px;
+    width: 180px;
+    margin: auto 0;
+    margin-top: 17px;
+    margin-right: 104px;
+    text-align: right;
     font-size: 16px;
     line-height: 16px;
-    text-align: left;
   }
 }
 

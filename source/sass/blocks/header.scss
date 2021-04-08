@@ -42,8 +42,8 @@
   @media (min-width: $tablet-width) {
     width: 60px;
     height: 52px;
-    margin-top: -2px;
-    margin-right: 73px;
+    margin-top: 0;
+    margin-right: 74px;
     grid-row: 1 / 2;
   }
 
@@ -72,7 +72,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-top: 5px;
+    margin-top: 7px;
     margin-right: -40px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
