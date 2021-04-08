@@ -163,18 +163,20 @@
       height: 2px;
       top: 16px;
       display: block;
-      margin-left: 14px;
+      margin-left: 20px;
       background: var(--basic_green);
     }
   }
 
   &--comment {
+    padding-top: 10px;
+
     &::after {
       position: relative;
       content: "";
       width: 100%;
       height: 2px;
-      top: 16px;
+      top: 15px;
       display: block;
       margin-left: 22px;
       background: var(--basic_green);
@@ -182,14 +184,14 @@
   }
 
   &--extra {
-    padding-top: 9px;
+    padding-top: 23px;
 
     &::after {
       position: relative;
       content: "";
       width: 100%;
       height: 2px;
-      top: 16px;
+      top: 15px;
       display: block;
       margin-left: 23px;
       background: var(--basic_green);
@@ -224,6 +226,7 @@
   }
 
   @media (min-width: $desktop-width) {
+
     &--data,
     &--comment,
     &--extra {
@@ -294,6 +297,7 @@
 
   &--data {
     margin-top: 35px;
+    padding-bottom: 0;
 
     @media (min-width: $tablet-width) {
       margin-top: 76px;
@@ -309,6 +313,8 @@
 
   &--extra {
     margin-top: 34px;
+    padding-left: 18px;
+    padding-bottom: 23px;
 
     @media (min-width: $tablet-width) {
       width: 100%;
@@ -331,7 +337,7 @@
   position: relative;
   width: 100%;
   height: 46px;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
   text-transform: uppercase;
   display: flex;
   font-weight: normal;
@@ -352,6 +358,7 @@
   &--comment {
     height: 150px;
     margin-top: 38px;
+    margin-bottom: 0;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -368,6 +375,7 @@
 
   &--extra {
     height: 30px;
+    margin-bottom: 12px;
     padding-left: 48px;
 
     @media (min-width: $tablet-width) {
@@ -392,6 +400,20 @@
   position: relative;
   margin-right: 13px;
   align-self: center;
+  display: flex;
+
+  &--cat-name {
+    margin-top: 0;
+    margin-right: 16px;
+  }
+
+  &--cat-weight {
+    margin-right: 18px;
+  }
+
+  &--cat-age {
+    margin-right: 15px;
+  }
 
   &--diet {
     padding-left: 45px;
@@ -406,7 +428,7 @@
       width: 30px;
       height: 30px;
       top: -5px;
-      left: -5px;
+      left: 0;
       background: url("../icons/stack.svg#form--radiobutton") 50% 50% no-repeat;
       background-size: cover;
 
@@ -415,6 +437,11 @@
         height: 40px;
       }
     }
+  }
+
+  &--mail {
+    width: 68px;
+    margin-right: 10px;
   }
 
   &--extra {
@@ -437,14 +464,29 @@
   }
 }
 
+.programm__label-required {
+  display: block;
+  margin-top: 8px;
+  margin-right: 0;
+  line-height: 0;
+}
+
 .programm__input {
   width: 100%;
   height: 46px;
-  padding-left: 15px;
+  padding-left: 13px;
   border: $border-basic;
   font-size: 16px;
   line-height: 46px;
   font-family: $font-oswald;
+
+  &--cat-weight {
+    padding-left: 14px;
+  }
+
+  &--cat-age {
+    padding-left: 15px;
+  }
 
   @media (min-width: $tablet-width) {
     height: 52px;
@@ -465,6 +507,7 @@
   }
 
   &:disabled {
+
     +.programm__label,
     +.programm__label::before {
       opacity: 0.3;
@@ -486,6 +529,11 @@
 
   &--comment {
     height: 150px;
+    padding-top: 9px;
+
+    &::placeholder {
+      line-height: 18px;
+    }
 
     @media (min-width: $tablet-width) {
       height: 174px;
@@ -563,6 +611,8 @@
 .programm__button {
   width: 100%;
   height: 40px;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
     width: 282px;
@@ -578,10 +628,11 @@
 }
 
 .programm__text-small {
-  width: 100%;
-  display: inline-block;
+  width: 157px;
+  display: flex;
+  margin: 0 auto;
   margin-top: 21px;
-  text-align: center;
+  padding-left: 5px;
   font-size: 14px;
   line-height: 16px;
   font-family: $font-arial;
@@ -592,4 +643,12 @@
     line-height: 16px;
     text-align: left;
   }
+}
+
+.programm__text-small-required {
+  margin-top: 8px;
+  margin-left: -4px;
+  margin-right: 4px;
+  display: inline-block;
+  line-height: 0;
 }
