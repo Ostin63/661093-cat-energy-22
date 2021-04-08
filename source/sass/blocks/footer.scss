@@ -161,15 +161,18 @@
 
   @media (min-width: $tablet-width) {
     width: 147px;
+    height: 34px;
     margin: 0 auto;
     padding-top: 71px;
     padding-left: 21px;
-    height: 34px;
     border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
+    width: 140px;
     padding-top: 75px;
+    padding-left: 0;
+    padding-right: 13px;
     grid-column: 2 / 4;
   }
 }
