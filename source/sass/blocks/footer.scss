@@ -37,6 +37,7 @@
 .footer__text {
   width: 50%;
   margin: 0;
+  margin-top: -1px;
   font-size: 16px;
   line-height: 18px;
   font-family: $font-oswald;
@@ -121,7 +122,7 @@
 
 .footer__logo {
   width: 100%;
-  padding-top: 38px;
+  padding-top: 36px;
   text-align: center;
   border-bottom: $border-grey-1;
 
@@ -152,9 +153,10 @@
   text-decoration: none;
   width: 130px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 19px;
   padding-left: 0;
-  padding-bottom: 20px;
+  padding-right: 6px;
+  padding-bottom: 21px;
   border-bottom: $border-grey-1;
   display: flex;
   justify-content: space-between;
@@ -163,8 +165,9 @@
     width: 147px;
     height: 34px;
     margin: 0 auto;
-    padding-top: 71px;
+    padding-top: 70px;
     padding-left: 21px;
+    padding-right: 0;
     border-bottom: none;
   }
 
@@ -188,16 +191,21 @@
   &--vkontakte {
     width: 23px;
     height: 16px;
+    margin-top: 5px;
+    margin-left: -2px;
 
     @media (min-width: $tablet-width) {
-      width: 30px;
+      width: 31px;
       height: 22px;
+      margin: 0;
     }
   }
 
   &--instagram {
     width: 16px;
     height: 16px;
+    margin-top: 5px;
+    margin-left: -2px;
 
     @media (min-width: $tablet-width) {
       width: 23px;
@@ -206,8 +214,9 @@
   }
 
   &--facebook {
-    width: 10px;
-    height: 17px;
+    width: 13px;
+    height: 18px;
+    margin-top: 4px;
 
     @media (min-width: $tablet-width) {
       width: 21px;
@@ -231,6 +240,7 @@
 }
 
 .footer__text-Academy {
+  margin-top: -3px;
   text-decoration: none;
   font-size: 16px;
   line-height: 18px;
@@ -238,11 +248,12 @@
   font-family: $font-arial;
 
   @media (min-width: $tablet-width) {
-    margin-top: -8px;
+    margin-top: -10px;
   }
 }
 
 .footer__logo-Academy {
+  margin-top: 2px;
   display: inline-block;
 
   @media (min-width: $tablet-width) {
@@ -253,4 +264,9 @@
 .footer__svg-logo-Academy {
   width: 27px;
   height: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -1px;
+    margin-right: 1px;
+  }
 }
