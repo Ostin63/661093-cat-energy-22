@@ -243,60 +243,63 @@
       </ul>
     </section>
     <section class="add-goods">
-      <h3 class="add-goods__title-block">Дополнительные&nbsp;товары</h3>
+      <div class="add-goods__title-wrapper">
+        <h3 class="add-goods__title-block">Дополнительные&nbsp;товары</h3>
+      </div>
       <ul class="add-goods__list">
         <li class="add-goods__item">
           <h4 class="add-goods__title">Сахарозаменитель</h4>
-          <table class="add-goods__table">
-            <tr class="add-goods__line">
-              <td class="add-goods__param">1 упаковка (100 г)</td>
-              <td class="add-goods__value">200 Р.</td>
+          <table class="add-goods__table  add-goods__table--sweetener">
+            <tr class="add-goods__line add-goods__line--sweetener">
+              <td class="add-goods__param add-goods__param--sweetener">1 упаковка (100 г)</td>
+              <td class="add-goods__value add-goods__value--sweetener">200 Р.</td>
             </tr>
           </table>
-          <a class="add-goods__button button button--green" href="#">заказать</a>
+          <a class="add-goods__button add-goods__button--sweetener button button--green" href="#">заказать</a>
         </li>
-        <li class="add-goods__item">
-          <h4 class="add-goods__title">питьевая вода</h4>
-          <table class="add-goods__table">
-            <tr class="add-goods__line">
-              <td class="add-goods__param">5 литров</td>
-              <td class="add-goods__value">50 Р.</td>
+        <li class="add-goods__item add-goods__item--drinking-water">
+          <h4 class="add-goods__title add-goods__title--drinking-water">питьевая вода</h4>
+          <table class="add-goods__table add-goods__table--drinking-water">
+            <tr class="add-goods__line add-goods__line--drinking-water">
+              <td class="add-goods__param add-goods__param--drinking-water">5 литров</td>
+              <td class="add-goods__value add-goods__value--drinking-water">50 Р.</td>
             </tr>
           </table>
-          <a class="add-goods__button button button--green" href="#">заказать</a>
+          <a class="add-goods__button add-goods__button--drinking-water button button--green" href="#">заказать</a>
         </li>
-        <li class="add-goods__item">
-          <h4 class="add-goods__title">молоко</h4>
-          <table class="add-goods__table">
-            <tr class="add-goods__line">
-              <td class="add-goods__param">1 литр</td>
-              <td class="add-goods__value">100 Р.</td>
+        <li class="add-goods__item add-goods__item--milk">
+          <h4 class="add-goods__title add-goods__title--milk">молоко</h4>
+          <table class="add-goods__table add-goods__table--milk">
+            <tr class="add-goods__line add-goods__line--milk">
+              <td class="add-goods__param add-goods__param--milk">1 литр</td>
+              <td class="add-goods__value add-goods__value--milk">100 Р.</td>
             </tr>
           </table>
-          <a class="add-goods__button button button--green" href="#">заказать</a>
+          <a class="add-goods__button add-goods__button--milk button button--green" href="#">заказать</a>
         </li>
-        <li class="add-goods__item">
-          <h4 class="add-goods__title">витамины</h4>
-          <table class="add-goods__table">
-            <tr class="add-goods__line">
-              <td class="add-goods__param">1 упаковка (30 г)</td>
-              <td class="add-goods__value">300 Р.</td>
+        <li class="add-goods__item add-goods__item--vitamins">
+          <h4 class="add-goods__title add-goods__title--vitamins">витамины</h4>
+          <table class="add-goods__table add-goods__table--vitamins">
+            <tr class="add-goods__line add-goods__line--vitamins">
+              <td class="add-goods__param add-goods__param--vitamins">1 упаковка (30 г)</td>
+              <td class="add-goods__value add-goods__value--vitamins">300 Р.</td>
             </tr>
           </table>
-          <a class="add-goods__button button button--green" href="#">заказать</a>
+          <a class="add-goods__button --drinking-water--vitamins button button--green" href="#">заказать</a>
         </li>
       </ul>
       <div class="present">
         <div class="present__background">
-          <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+          <p class="present__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
         </div>
       </div>
     </section>
   </main>
-  <footer class="page__footer footer">
+  <footer class="page__footer footer footer--catalog">
     <div class="footer__cooperation">
       <p class="footer__text"><span class="footer__text-correction">приглашаем</span> <br>к сотрудничеству дилеров!</p>
-      <p class="footer__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <p class="footer__adress">ул. Большая Конюшенная, д. 19/8 <span class="footer__adress-city">Санкт-Петербург</span>
+      </p>
     </div>
     <div class="footer__map">
       <iframe class="footer__iframe"
@@ -321,8 +324,7 @@
       <ul class="footer__social">
         <li class="footer__item">
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-svg footer__social-svg--vkontakte hovericon" role="img"
-              aria-label="Мы вконтакте">
+            <svg class="footer__social-svg footer__social-svg--vkontakte hovericon" role="img" aria-label="Мы вконтакте">
               <use xlink:href="icons/stack.svg#footer--vkontakte"></use>
             </svg>
           </a>
@@ -337,8 +339,7 @@
         </li>
         <li class="footer__item">
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-svg footer__social-svg--facebook hovericon" role="img"
-              aria-label="Мы в Фейсбуке">
+            <svg class="footer__social-svg footer__social-svg--facebook hovericon" role="img" aria-label="Мы в Фейсбуке">
               <use xlink:href="icons/stack.svg#footer--facebook"></use>
             </svg>
           </a>
