@@ -6,6 +6,7 @@
   grid-column: 2 / 3;
 
   @media (min-width: $tablet-width) {
+    padding-top: 69px;
     padding-left: 30px;
     padding-right: 30px;
     grid-column: 1 / -1;
@@ -83,6 +84,7 @@
     margin: 0;
     margin-right: 124px;
     float: right;
+    text-align: left;
   }
 
   @media (min-width: $desktop-width) {
