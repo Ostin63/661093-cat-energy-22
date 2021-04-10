@@ -74,7 +74,7 @@
     grid-column: 2 / -2;
     grid-template-columns: repeat(4, 245px);
     grid-column-gap: 80px;
-    grid-row-gap: 70px;
+    grid-row-gap: 64px;
   }
 }
 
@@ -101,6 +101,10 @@
       grid-column: 1 / -1;
       grid-row: 2 / -1;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: 58px 122px 60px 99px 87px;
   }
 }
 
@@ -226,6 +230,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    height: 40px;
     margin-top: 8px;
     margin-right: 4px;
   }
@@ -244,6 +249,10 @@
     height: auto;
     padding: 52px 37px 38px;
     border: $border-basic_grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 79px;
   }
 }
 
