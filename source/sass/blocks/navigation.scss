@@ -1,9 +1,12 @@
 .navigation {
+  position: relative;
+  margin-bottom: -198px;
   padding: 0;
   list-style: none;
   grid-column: 1 / -1;
   grid-row: 2 / -1;
   display: none;
+  background: var(--basic-white);
   z-index: 10;
 
   &--active {
@@ -15,6 +18,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    position: static;
+    margin-bottom: 0;
     margin-top: 0;
     padding-left: 74px;
     display: grid;
@@ -23,6 +28,7 @@
     grid-column: 2 / -1;
     grid-row: 1 / -1;
     align-items: center;
+    background: none;
   }
 
   @media (min-width: $desktop-width) {
