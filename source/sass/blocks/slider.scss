@@ -170,7 +170,7 @@
   padding: 0;
   border: none;
   color: var(--basic-green);
-  background: url("../img/demo/range-button.svg") 50% 50% no-repeat;
+  background: url("../icons/stack.svg#demo--range-button") 50% 50% no-repeat;
   background-size: cover;
 
   @media (min-width: $tablet-width) {
@@ -180,7 +180,7 @@
     border-radius: 34px;
     box-shadow: var(--shadow-16);
     left: calc(50% - 34px / 2);
-    background: url("../img/demo/renge-button-tablet.svg") 50% 50% no-repeat;
+    background: url("../icons/stack.svg#demo--renge-button-tablet") 50% 50% no-repeat;
     background-size: cover;
     cursor: grab;
 
