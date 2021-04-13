@@ -10,6 +10,11 @@ toggle.addEventListener("click", function () {
   navigation.classList.toggle("navigation--active");
 })
 
+// Map
+
+document.querySelector(".footer__map-img").classList.add("visually-hidden"); 
+
+
 // Form
 
 const programm = document.querySelector('.programm');
