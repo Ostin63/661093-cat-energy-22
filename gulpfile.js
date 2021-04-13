@@ -29,7 +29,7 @@ exports.styles = styles;
 // Logo
 
 const logo = () => {
-  return src("source/img/logo/*.svg")
+  return src("source/logo/*.svg")
     .pipe(imagemin([
       imagemin.svgo()
     ]))
@@ -75,7 +75,7 @@ const watcher = () => {
   watch("source/sass/**/*.scss", series("styles"));
   watch("source/*.html").on("change", sync.reload);
   watch("source/img/**/*.svg", series(svgstack));
-  watch("source/img/logo/*.svg", series(logo));
+  watch("source/logo/*.svg", series(logo));
 }
 
 exports.default = series(
