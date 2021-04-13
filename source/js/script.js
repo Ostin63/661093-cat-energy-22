@@ -12,7 +12,8 @@ toggle.addEventListener("click", function () {
 
 // Map
 
-document.querySelector(".footer__map-img").classList.add("visually-hidden"); 
+const footerMap = document.querySelector(".footer__map-img");
+footerMap.classList.add("visually-hidden");
 
 
 // Form
