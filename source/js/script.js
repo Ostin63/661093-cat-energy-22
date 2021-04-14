@@ -44,5 +44,20 @@ if (programm) {
         field.classList.remove('error');
       }
     }
-  });
+  })
 }
+
+// Slider
+/*
+const sliderBefore = document.querySelector(".slider__img--before");
+const sliderBar = document.querySelector(".slider__bar");
+const sliderPin = sliderBar.querySelector(".slider__pin");
+
+let imgWidth = sliderBefore.offsetWidth;
+
+sliderBefore.style.width = (imgWidth / 2) + "px";
+
+let barWidth = sliderBar.offsetWidth;
+
+sliderPin.style.left = (barWidth / 2 - 25) + "px";
+*/
