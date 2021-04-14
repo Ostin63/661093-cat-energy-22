@@ -270,7 +270,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &--data,
     &--comment,
     &--extra {
@@ -637,7 +636,6 @@
   }
 
   &:disabled {
-
     +.programm__label,
     +.programm__label::before {
       opacity: 0.3;
