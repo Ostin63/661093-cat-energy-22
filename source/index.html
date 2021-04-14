@@ -123,26 +123,26 @@
 
       </dl>
       <div class="demo__slider slider">
-        <div class="slider__img slider__img--active">
+        <div class="slider__img slider__img--before slider__img--active">
           <picture>
             <source media="(min-width:  768px)" srcset="img/demo/cat-tablet-before.png, img/demo/cat-tablet-before@2.png 2x">
-            <img src="img/demo/cat-mobile-before.png" srcset="img/demo/cat-mobile-before@2.png 2x" width="280" height="232" alt="было">
+            <img class="slider__review-img" src="img/demo/cat-mobile-before.png" srcset="img/demo/cat-mobile-before@2.png 2x" width="277" height="232" alt="было">
           </picture>
         </div>
         <div class="slider__img slider__img--after">
           <picture>
             <source media="(min-width:  768px)" srcset="img/demo/cat-tablet-after.png, img/demo/cat-tablet-after@2.png 2x">
-            <img src="img/demo/cat-mobile-after.png" srcset="img/demo/cat-mobile-after@2.png 2x" width="251" height="240" alt="стало">
+            <img class="slider__review-img" src="img/demo/cat-mobile-after.png" srcset="img/demo/cat-mobile-after@2.png 2x" width="251" height="240" alt="стало">
           </picture>
         </div>
         <div class="slider__range">
           <div class="slider__bar">
-            <button class="slider__pin" type="button">
+            <div class="slider__pin">
               <span class="visually-hidden">Ползунок слайдера</span>
-            </button>
+            </div>
           </div>
-          <button class="slider__label slider__label--before">Было</button>
-          <button class="slider__label slider__label--after">Стало</button>
+          <button class="slider__label slider__label--before"  type="button">Было</button>
+          <button class="slider__label slider__label--after"  type="button">Стало</button>
         </div>
       </div>
     </section>
