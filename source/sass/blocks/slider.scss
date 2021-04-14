@@ -16,10 +16,9 @@
 }
 
 .slider__img {
-  min-width: 280px;
-  max-width: 677px;
+  width: 277px;
   height: auto;
-  margin-left: calc(50% - 284px / 2);
+  margin-left: calc(50% - 286px / 2);
   display: none;
 
   &--active {
@@ -68,7 +67,7 @@
 }
 
 .slider__range {
-  margin-top: 22px;
+  margin-top: 19px;
   padding-left: 27px;
   padding-right: 25px;
   display: grid;
