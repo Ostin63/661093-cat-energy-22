@@ -626,7 +626,7 @@
   &:focus,
   &:focus-visible {
     border-radius: 0;
-    border: $border-dark;
+    border: $border-dark2;
 
     +.programm__input-icon {
       fill: var(--basic_green);
