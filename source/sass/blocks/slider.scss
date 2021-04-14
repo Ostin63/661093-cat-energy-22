@@ -45,12 +45,13 @@
     background: var(--gray-background);
 
     @media (min-width: $tablet-width) {
-      width: 50%;
+      width: calc(677px / 2);
       left: 0;
       background: var(--linear-gradient-cat);
     }
 
     @media (min-width: $desktop-width) {
+      width: 365px;
       background: var(--linear-gradient-cat-desktop);
     }
   }
@@ -62,7 +63,8 @@
 
     @media (min-width: $tablet-width) {
       width: 545px;
-      left: 20px;
+      top: 0;
+      left: 91px;
     }
   }
 }
@@ -75,6 +77,11 @@
   @media (min-width: $tablet-width) {
     width: 677px;
     height: 520px;
+
+    &--after {
+      width: 545px;
+      height: 520px;
+    }
   }
 }
 
@@ -177,19 +184,18 @@
 }
 
 .slider__pin {
+  position: absolute;
   width: 35px;
   height: 6px;
   padding: 0;
-  border: none;
   color: var(--basic-green);
   background: url("../icons/stack.svg#demo--range-button") 50% 50% no-repeat;
   background-size: cover;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: -16px;
     width: 38px;
     height: 38px;
+    top: -16px;
     border-radius: 34px;
     box-shadow: var(--shadow-16);
     left: calc(50% - 36px / 2);
@@ -206,6 +212,7 @@
       background: url("../icons/stack.svg#demo--renge-button-press") 50% 50% no-repeat;
       background-size: cover;
       outline: none;
+
     }
   }
 }
