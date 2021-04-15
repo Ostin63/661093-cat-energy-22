@@ -668,14 +668,6 @@
       }
     }
 
-    &::placeholder {
-      line-height: 18px;
-
-      @media (min-width: $tablet-width) {
-        line-height: 31px;
-      }
-    }
-
     @media (min-width: $tablet-width) {
       height: 174px;
     }
