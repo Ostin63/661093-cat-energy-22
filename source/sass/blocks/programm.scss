@@ -21,8 +21,8 @@
 
 .programm__title {
   margin-top: 0;
-  padding-left: 20px;
   margin-bottom: 37px;
+  padding-left: 20px;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
@@ -270,6 +270,7 @@
   }
 
   @media (min-width: $desktop-width) {
+
     &--data,
     &--comment,
     &--extra {
@@ -646,11 +647,12 @@
     text-transform: uppercase;
     font-weight: normal;
     font-size: 16px;
-    line-height: 46px;
+    line-height: 44px;
     font-family: $font-oswald;
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
+      line-height: 46px;
     }
   }
 
@@ -704,12 +706,14 @@
 
 .programm__input-icon {
   position: absolute;
+  line-height: 46px;
 
   &--mail {
     width: 20px;
     height: 20px;
     top: 13px;
     right: 15px;
+    margin-bottom: 2px;
   }
 
   &--phone {
@@ -721,8 +725,7 @@
 }
 
 .programm__container-button {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
