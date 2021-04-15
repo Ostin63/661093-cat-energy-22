@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/favicon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,15 +17,15 @@
   <header class="page__header page__header--index header">
     <a class="header__logo">
       <picture>
-      <source media="(min-width: 1440px)" srcset="icons/logo-desktop.svg">
-      <source media="(min-width: 768px)" srcset="icons/logo-tablet.svg">
-      <img src="icons/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
-    </picture>
+        <source media="(min-width: 1440px)" srcset="icons/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="icons/logo-tablet.svg">
+        <img src="icons/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
+      </picture>
     </a>
     <a class="header__logo-text">
       <img src="icons/logo-text.svg" width="101" height="18" alt="Логотип магазина Cat Energy">
     </a>
-    <button class="header__menu-toggle header__menu-toggle--active">
+    <button class="header__menu-toggle">
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <ul class="header__navigation navigation navigation--active">
@@ -45,12 +49,12 @@
       </div>
       <div class="promo__image">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/promo/index-can.png">
-          <source media="(min-width: 768px)" srcset="img/promo/can-tablet.png">
-          <img src="img/promo/index-can-mobile.png" alt="">
+          <source media="(min-width: 1440px)" srcset="img/promo/index-can.png, img/promo/index-can@2.png 2x">
+          <source media="(min-width: 768px)" srcset="img/promo/can-tablet.png, img/promo/can-tablet@2.png 2x">
+          <img src="img/promo/index-can-mobile.png" srcset="img/promo/index-can-mobile@2.png" width="280" height="270" alt="">
         </picture>
       </div>
-      <a class="promo__button button button--green" href="#">подобрать программу</a>
+      <a class="promo__button button button--green" href="form.html">подобрать программу</a>
     </section>
     <section class="directions">
       <h2 class="visually-hidden">Программа питания</h2>
@@ -119,23 +123,30 @@
 
       </dl>
       <div class="demo__slider slider">
-        <div class="slider__img slider__img--active">
-          <picture>
-            <source media="(min-width:  768px)" srcset="img/demo/cat-tablet.png">
-            <img src="img/demo/cat-mobile.png" width="239" height="232" alt="было">
-          </picture>
-        </div>
-        <div class="slider__img">
-          <img src="img/demo/cat-2-mobile.png" width="251" height="240" alt="стало">
+        <div class="slider__wrapper-images">
+          <div class="slider__img slider__img--before slider__img--active">
+            <picture>
+              <source media="(min-width:  768px)" srcset="img/demo/cat-tablet-before.png, img/demo/cat-tablet-before@2.png 2x">
+              <img class="slider__review-img" src="img/demo/cat-mobile-before.png" srcset="img/demo/cat-mobile-before@2.png 2x"
+                width="277" height="232" alt="было">
+            </picture>
+          </div>
+          <div class="slider__img slider__img--after">
+            <picture>
+              <source media="(min-width:  768px)" srcset="img/demo/cat-tablet-after.png, img/demo/cat-tablet-after@2.png 2x">
+              <img class="slider__review-img slider__review-img--after" src="img/demo/cat-mobile-after.png" srcset="img/demo/cat-mobile-after@2.png 2x"
+                width="251" height="240" alt="стало">
+            </picture>
+          </div>
         </div>
         <div class="slider__range">
           <div class="slider__bar">
-            <button class="slider__pin" type="button">
+            <div class="slider__pin">
               <span class="visually-hidden">Ползунок слайдера</span>
-            </button>
+            </div>
           </div>
-          <button class="slider__label slider__label--before">Было</button>
-          <button class="slider__label slider__label--after">Стало</button>
+          <button class="slider__label slider__label--before"  type="button">Было</button>
+          <button class="slider__label slider__label--after"  type="button">Стало</button>
         </div>
       </div>
     </section>
@@ -143,12 +154,14 @@
   <footer class="page__footer footer">
     <div class="footer__cooperation">
       <p class="footer__text"><span class="footer__text-correction">приглашаем</span> <br>к сотрудничеству дилеров!</p>
-      <p class="footer__adress">ул. Большая Конюшенная, д. 19/8 <span class="footer__adress-city">Санкт-Петербург</span></p>
+      <p class="footer__adress">ул. Большая Конюшенная, д. 19/8 <span class="footer__adress-city">Санкт-Петербург</span>
+      </p>
     </div>
     <div class="footer__map">
       <iframe class="footer__iframe"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A3993b2eae56783a7ec18ef27754b192f34c91cda61448cd94b8d2c8ccc37fada&amp;source=constructor" frameborder="0"></iframe>
-      <img class="visually-hidden" src="img/map/map-mobil.jpg" alt="">
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A3993b2eae56783a7ec18ef27754b192f34c91cda61448cd94b8d2c8ccc37fada&amp;source=constructor"
+        frameborder="0"></iframe>
+      <img class="footer__map-img" src="img/map/map-mobil.jpg" alt="карта засположения магазина Cat Energy ул. Большая Конюшенная, д. 19/8">
     </div>
     <div class="footer__bottom">
       <a class="footer__logo">
@@ -167,21 +180,24 @@
       <ul class="footer__social">
         <li class="footer__item">
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-svg footer__social-svg--vkontakte hovericon" role="img" aria-label="Мы вконтакте">
+            <svg class="footer__social-svg footer__social-svg--vkontakte hovericon" role="img"
+              aria-label="Мы вконтакте">
               <use xlink:href="icons/stack.svg#footer--vkontakte"></use>
             </svg>
           </a>
         </li>
         <li class="footer__item">
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-svg footer__social-svg--instagram hovericon" role="img" aria-label="Мы в Инстаграме">
+            <svg class="footer__social-svg footer__social-svg--instagram hovericon" role="img"
+              aria-label="Мы в Инстаграме">
               <use xlink:href="icons/stack.svg#footer--instagram"></use>
             </svg>
           </a>
         </li>
         <li class="footer__item">
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-svg footer__social-svg--facebook hovericon" role="img" aria-label="Мы в Фейсбуке">
+            <svg class="footer__social-svg footer__social-svg--facebook hovericon" role="img"
+              aria-label="Мы в Фейсбуке">
               <use xlink:href="icons/stack.svg#footer--facebook"></use>
             </svg>
           </a>
@@ -190,7 +206,8 @@
       <div class="footer__copyright">
         <a class="footer__text-Academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="footer__logo-Academy" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="footer__svg-logo-Academy hovericon" role="img" width="27" height="34" aria-label="Логотип HTMLAcademy">
+          <svg class="footer__svg-logo-Academy hovericon" role="img" width="27" height="34"
+            aria-label="Логотип HTMLAcademy">
             <use xlink:href="icons/stack.svg#footer--footer-logo-htmlacademy"></use>
           </svg>
         </a>

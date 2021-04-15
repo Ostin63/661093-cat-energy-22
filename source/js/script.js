@@ -10,6 +10,13 @@ toggle.addEventListener("click", function () {
   navigation.classList.toggle("navigation--active");
 })
 
+// Map
+
+const footerMap = document.querySelector(".footer__map-img");
+if (footerMap) {
+  footerMap.classList.add("visually-hidden");
+}
+
 // Form
 
 const programm = document.querySelector('.programm');
@@ -37,5 +44,25 @@ if (programm) {
         field.classList.remove('error');
       }
     }
+<<<<<<< HEAD
   });
 }
+=======
+  })
+}
+
+// Slider
+/*
+const sliderBefore = document.querySelector(".slider__img--before");
+const sliderBar = document.querySelector(".slider__bar");
+const sliderPin = sliderBar.querySelector(".slider__pin");
+
+let imgWidth = sliderBefore.offsetWidth;
+
+sliderBefore.style.width = (imgWidth / 2) + "px";
+
+let barWidth = sliderBar.offsetWidth;
+
+sliderPin.style.left = (barWidth / 2 - 25) + "px";
+*/
+>>>>>>> 2a3b02aa686cae9aff2051646d11f53c83b84363

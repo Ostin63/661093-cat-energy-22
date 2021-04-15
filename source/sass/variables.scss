@@ -27,6 +27,8 @@
   --green-85: rgba(104, 183, 56, 0.85);
   --error: #ff8282;
   --linear-gradient: linear-gradient(180deg, var(--basic-white) 197px, var(--gray-background) 197px);
+  --linear-gradient-cat: linear-gradient(180deg, var(--basic-white) 173px, var(--gray-background) 173px);
+  --linear-gradient-cat-desktop: linear-gradient(180deg, var(--basic-white) 192px, var(--gray-background) 192px);
   --shadow-16: 0 1px 3px var(--black-16);
   --shadow-19: 0 2px 4px var(--black-19);
   --shadow-20: 0 3px 5px var(--black-20);
@@ -51,6 +53,7 @@ $border-gray: 1px solid var(--gray-bottom);
 $border-basic: 1px solid var(--basic-border);
 $border-grey: 1px solid var(--special_grey);
 $border-dark: 1px solid var(--special_dark-grey);
+$border-dark2: 2px solid var(--special_dark-grey);
 $border-grey-1: 1px solid var(--special_grey-1);
 $border-catalog: 1px solid var(--gray-catalog);
 $border-green: 2px solid var(--basic_green);

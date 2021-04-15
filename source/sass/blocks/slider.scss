@@ -1,9 +1,9 @@
 .slider {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 41px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 30px;
+    padding-top: 24px;
     padding-bottom: 0;
     background: var(--linear-gradient);
   }
@@ -15,46 +15,88 @@
   }
 }
 
-.slider__img {
-  max-width: 280px;
-  height: auto;
-  padding-right: 44px;
+.slider__wrapper-images {
+  position: relative;
+  width: 282px;
+  height: 240px;
   margin: 0 auto;
-  margin-top: 3px;
-  display: none;
-
-  &--active {
-    display: block;
-  }
 
   @media (min-width: $tablet-width) {
-    max-width: 462px;
-    height: 511px;
-    margin-top: -3px;
-    padding-right: 0;
-    margin-left: calc(50% - 302px);
-    grid-column: 1 / -1;
-    grid-row: 1 / 3;
+    width: 677px;
+    height: 544px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 511px;
-    padding-top: 18px;
-    margin-left: calc(50% - 345px);
+    margin-top: 13px;
+    margin-left: -80px;
+  }
+}
+
+.slider__img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &--before {
+    left: -3px;
+    z-index: 1;
+    background: var(--gray-background);
+
+    @media (min-width: $tablet-width) {
+      width: calc(677px / 2);
+      left: 0;
+      background: var(--linear-gradient-cat);
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 365px;
+      background: var(--linear-gradient-cat-desktop);
+    }
+  }
+
+  &--after {
+    width: 251px;
+    top: 2px;
+    left: calc(50% - 249px / 2);
+
+    @media (min-width: $tablet-width) {
+      width: 545px;
+      top: 0;
+      left: 91px;
+    }
+  }
+}
+
+.slider__review-img {
+  width: 277px;
+  height: 230px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 677px;
+    height: 520px;
+
+    &--after {
+      width: 545px;
+      height: 520px;
+    }
   }
 }
 
 .slider__range {
-  margin-top: 19px;
+  margin-top: 14px;
   padding-left: 27px;
   padding-right: 25px;
   display: grid;
   grid-template-columns: 70px 1fr 70px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 15px;
+    margin-top: -14px;
+    margin-left: -3px;
     padding-bottom: 0;
-    padding-left: 86px;
+    padding-left: 90px;
     padding-right: 90px;
     grid-column: 1 / -1;
     grid-row: 3 / -1;
@@ -63,7 +105,7 @@
   @media (min-width: $desktop-width) {
     margin-left: -13px;
     margin-right: 21px;
-    margin-top: 55px;
+    margin-top: 5px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -120,8 +162,8 @@
 .slider__bar {
   position: relative;
   height: 14px;
-  padding-left: 7px;
-  padding-right: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -142,22 +184,22 @@
 }
 
 .slider__pin {
+  position: absolute;
   width: 35px;
   height: 6px;
   padding: 0;
-  border: none;
   color: var(--basic-green);
-  background: url("../img/demo/range-button.svg") 50% 50% no-repeat;
+  background: url("../icons/stack.svg#demo--range-button") 50% 50% no-repeat;
   background-size: cover;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
     width: 34px;
     height: 34px;
+    top: -15px;
     border-radius: 34px;
     box-shadow: var(--shadow-16);
-    left: calc(50% - 34px / 2);
-    background: url("../img/demo/renge-button-tablet.svg") 50% 50% no-repeat;
+    left: calc(50% - 36px / 2);
+    background: url("../icons/stack.svg#demo--renge-button-tablet") 50% 50% no-repeat;
     background-size: cover;
     cursor: grab;
 
