@@ -44,10 +44,6 @@ if (programm) {
         field.classList.remove('error');
       }
     }
-<<<<<<< HEAD
-  });
-}
-=======
   })
 }
 
@@ -65,4 +61,3 @@ let barWidth = sliderBar.offsetWidth;
 
 sliderPin.style.left = (barWidth / 2 - 25) + "px";
 */
->>>>>>> 2a3b02aa686cae9aff2051646d11f53c83b84363
