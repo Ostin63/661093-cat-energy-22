@@ -96,11 +96,11 @@
   align-self: center;
   padding: 0;
   border: none;
-  background: url("../img/header/sandwich.svg") 50% 50% no-repeat;
+  background: url("../img/stack.svg#sandwich") 50% 50% no-repeat;
   grid-column: 3 / -1;
 
   &--active {
-    background: url("../img/header/close.svg") 50% 50% no-repeat;
+    background: url("../img/stack.svg#close") 50% 50% no-repeat;
   }
 
   @media (min-width: $tablet-width) {

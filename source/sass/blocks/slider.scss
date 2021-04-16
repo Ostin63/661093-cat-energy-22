@@ -189,7 +189,7 @@
   height: 6px;
   padding: 0;
   color: var(--basic-green);
-  background: url("../icons/stack.svg#demo--range-button") 50% 50% no-repeat;
+  background: url("../img/stack.svg#range-button") 50% 50% no-repeat;
   background-size: cover;
 
   @media (min-width: $tablet-width) {
@@ -199,7 +199,7 @@
     border-radius: 34px;
     box-shadow: var(--shadow-16);
     left: calc(50% - 36px / 2);
-    background: url("../icons/stack.svg#demo--renge-button-tablet") 50% 50% no-repeat;
+    background: url("../img/stack.svg#renge-button-tablet") 50% 50% no-repeat;
     background-size: cover;
     cursor: grab;
 
@@ -209,7 +209,7 @@
 
     &:active {
       box-shadow: var(--shadow-20);
-      background: url("../icons/stack.svg#demo--renge-button-press") 50% 50% no-repeat;
+      background: url("../img/stack.svg#renge-button-press") 50% 50% no-repeat;
       background-size: cover;
       outline: none;
     }
