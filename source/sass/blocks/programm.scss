@@ -270,6 +270,7 @@
   }
 
   @media (min-width: $desktop-width) {
+
     &--data,
     &--comment,
     &--extra {
@@ -636,6 +637,7 @@
   }
 
   &:disabled {
+
     +.programm__label,
     +.programm__label::before {
       opacity: 0.3;
@@ -713,6 +715,10 @@
     top: 13px;
     right: 15px;
     margin-bottom: 2px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 2px;
+    }
   }
 
   &--phone {
@@ -720,6 +726,10 @@
     height: 20px;
     top: 13px;
     right: 13px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 3px;
+    }
   }
 }
 
