@@ -1,10 +1,11 @@
-const {src, dest, watch, series} = require("gulp");
+const { src, dest, watch, series } = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
 const svgsprite = require("gulp-svg-sprite");
 const sync = require("browser-sync").create();
@@ -20,20 +21,45 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(dest("source/css"))
+    .pipe(dest("dist/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
 
+// HTML
+
+const html = () => {
+  return src("source/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(dest("dist"));
+}
+
+// Images
+
+const images = () => {
+  return src("source/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.mozjpeg({
+        progressive: true
+      }),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.svgo()
+    ]))
+    .pipe(dest("source/img"))
+}
+
+exports.images = images;
+
 // Logo
 
 const logo = () => {
-  return src("source/logo/*.svg")
-    .pipe(imagemin([
-      imagemin.svgo()
-    ]))
-    .pipe(dest("source/icons"))
+  return src("source/img/logo/*.svg")
+    .pipe(dest("dist/icons"))
 }
 
 exports.logo = logo;
@@ -41,24 +67,42 @@ exports.logo = logo;
 // Svg stack
 
 const svgstack = () => {
-  return src("source/img/**/*.svg")
+  return src("source/icons/*.svg")
     .pipe(svgsprite({
       mode: {
         stack: {}
       }
     }))
     .pipe(rename("stack.svg"))
-    .pipe(dest("source/icons"));
+    .pipe(dest("dist/img"));
 }
 
 exports.svgstack = svgstack;
+
+// Copy
+
+const copy = (done) => {
+  src([
+    "source/fonts/*.{woff2,woff}",
+    "source/img/*.ico",
+    "source/img/**/*.{jpg,png,svg}",
+    "source/img/logo/*.svg",
+    "source/*.webmanifest",
+  ], {
+    base: "source"
+  })
+    .pipe(dest("dist/img"))
+  done();
+}
+
+exports.copy = copy;
 
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'dist'
     },
     cors: true,
     notify: false,
@@ -69,19 +113,32 @@ const server = (done) => {
 
 exports.server = server;
 
+// Reload
+
+const reload = done => {
+  sync.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   watch("source/sass/**/*.scss", series("styles"));
   watch("source/*.html").on("change", sync.reload);
-  watch("source/img/**/*.svg", series(svgstack));
-  watch("source/logo/*.svg", series(logo));
+  watch("source/icons/*.svg", series(svgstack));
+  watch("source/img/logo/*.svg", series(logo));
+  watch("source/*.html", series(html, reload));
 }
 
+//default
+
 exports.default = series(
+  html,
+  images,
   styles,
+  svgstack,
+  logo,
   server,
   watcher,
-  svgstack,
-  logo
+  copy
 );
