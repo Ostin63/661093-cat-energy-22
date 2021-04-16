@@ -57,6 +57,13 @@ const logo = () => {
 
 exports.logo = logo;
 
+const favicon = () => {
+  return src("source/favicon/*.{jpg,png,svg}")
+    .pipe(dest("dist/img/favicon"))
+}
+
+exports.favicon = favicon;
+
 const svgstack = () => {
   return src("source/icons/**/*.svg")
     .pipe(svgsprite({
@@ -109,8 +116,8 @@ const reload = done => {
 }
 
 const watcher = () => {
+  watch("source/*.html", series(html, reload));
   watch("source/sass/**/*.scss", series("styles"));
-  watch("source/*.html").on("change", reload);
 }
 
 const dist = series(
@@ -119,6 +126,7 @@ const dist = series(
   html,
   copy,
   logo,
+  favicon,
   images,
   svgstack
 );
@@ -132,6 +140,7 @@ exports.default = series(
   styles,
   svgstack,
   logo,
+  favicon,
   copy,
   server,
   watcher
