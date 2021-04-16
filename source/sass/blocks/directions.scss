@@ -95,7 +95,7 @@
       left: -69px;
       width: 50px;
       height: 53px;
-      background: url("../icons/stack.svg#directions--cat-back") 50% 50% no-repeat;
+      background: url("../img/stack.svg#cat-back") 50% 50% no-repeat;
       background-size: cover;
       z-index: 1;
 
@@ -128,7 +128,7 @@
       left: -78px;
       width: 67px;
       height: 50px;
-      background: url("../icons/stack.svg#directions--cat-back-up") 50% 50% no-repeat;
+      background: url("../img/stack.svg#cat-back-up") 50% 50% no-repeat;
       background-size: cover;
 
       @media (min-width: $tablet-width) {
@@ -214,7 +214,7 @@
       align-self: center;
       margin-top: -2px;
       margin-left: 15px;
-      background: url("../img/directions/arrow.svg") 50% 50% no-repeat;
+      background: url("../img/stack.svg#arrow") 50% 50% no-repeat;
       background-size: cover;
       box-sizing: border-box;
 
@@ -232,7 +232,7 @@
       &::after {
         width: 32px;
         height: 10px;
-        background: url("../img/directions/arrow-hover.svg") 50% 50% no-repeat;
+        background: url("../img/stack.svg#arrow-hover") 50% 50% no-repeat;
         background-size: cover;
       }
     }

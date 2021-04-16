@@ -22,7 +22,7 @@
 
   &::before {
     content: "";
-    background-image: url("../img/promo/background-mobile.jpg");
+    background-image: url("../img/background-mobile.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,7 +31,7 @@
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo/background-mobile@2.jpg");
+      background-image: url("../img/background-mobile@2.jpg");
       background-size: cover;
     }
 
@@ -41,14 +41,14 @@
 
     @media (min-width: $desktop-width) {
       content: "";
-      background-image: url("../img/promo/background-desktop.jpg");
+      background-image: url("../img/background-desktop.jpg");
       height: 694px;
       grid-column: 3/ -1;
       grid-row: 1 / -1;
       margin-left: -40px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/promo/background-desktop@2.jpg");
+        background-image: url("../img/background-desktop@2.jpg");
         background-size: cover;
       }
     }

@@ -514,7 +514,7 @@
       height: 30px;
       top: -5px;
       left: 0;
-      background: url("../icons/stack.svg#form--radiobutton") 50% 50% no-repeat;
+      background: url("../img/stack.svg#radiobutton") 50% 50% no-repeat;
       background-size: cover;
 
       @media (min-width: $tablet-width) {
@@ -677,7 +677,7 @@
     +.programm__label--diet::before {
       width: 30px;
       height: 30px;
-      background: url("../icons/stack.svg#form--radio-active") 50% 50% no-repeat;
+      background: url("../img/stack.svg#radio-active") 50% 50% no-repeat;
       background-size: cover;
 
       @media (min-width: $tablet-width) {
@@ -689,7 +689,7 @@
 
   &--extra:checked {
     +.programm__label--extra::before {
-      background: url("../icons/stack.svg#form--tick") 50% 50% no-repeat;
+      background: url("../img/stack.svg#tick") 50% 50% no-repeat;
       background-size: cover;
     }
   }
