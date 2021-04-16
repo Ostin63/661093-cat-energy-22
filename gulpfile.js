@@ -8,9 +8,8 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
 const svgsprite = require("gulp-svg-sprite");
+const del = require("del");
 const sync = require("browser-sync").create();
-
-// Styles
 
 const styles = () => {
   return src("source/sass/style.scss")
@@ -27,8 +26,6 @@ const styles = () => {
 
 exports.styles = styles;
 
-// HTML
-
 const html = () => {
   return src("source/*.html")
     .pipe(htmlmin({
@@ -36,8 +33,6 @@ const html = () => {
     }))
     .pipe(dest("dist"));
 }
-
-// Images
 
 const images = () => {
   return src("source/img/**/*.{png,jpg,svg}")
@@ -55,16 +50,12 @@ const images = () => {
 
 exports.images = images;
 
-// Logo
-
 const logo = () => {
-  return src("source/img/logo/*.svg")
-    .pipe(dest("dist/icons"))
+  return src("source/logo/*.svg")
+    .pipe(dest("dist/img/logo"))
 }
 
 exports.logo = logo;
-
-// Svg stack
 
 const svgstack = () => {
   return src("source/icons/*.svg")
@@ -79,25 +70,25 @@ const svgstack = () => {
 
 exports.svgstack = svgstack;
 
-// Copy
-
 const copy = (done) => {
   src([
     "source/fonts/*.{woff2,woff}",
-    "source/img/*.ico",
+    "source/*.ico",
     "source/img/**/*.{jpg,png,svg}",
     "source/img/logo/*.svg",
     "source/*.webmanifest",
   ], {
     base: "source"
   })
-    .pipe(dest("dist/img"))
+    .pipe(dest("dist"))
   done();
 }
 
 exports.copy = copy;
 
-// Server
+const clean = () => {
+  return del("dist");
+};
 
 const server = (done) => {
   sync.init({
@@ -113,32 +104,37 @@ const server = (done) => {
 
 exports.server = server;
 
-// Reload
-
 const reload = done => {
   sync.reload();
   done();
 }
 
-// Watcher
-
 const watcher = () => {
   watch("source/sass/**/*.scss", series("styles"));
-  watch("source/*.html").on("change", sync.reload);
-  watch("source/icons/*.svg", series(svgstack));
-  watch("source/img/logo/*.svg", series(logo));
-  watch("source/*.html", series(html, reload));
+  watch("source/*.html").on("change", reload);
 }
 
-//default
+const dist = series(
+  clean,
+    styles,
+    html,
+    copy,
+    logo,
+    images,
+    svgstack
+);
+
+exports.dist = dist;
 
 exports.default = series(
-  html,
-  images,
-  styles,
-  svgstack,
-  logo,
-  server,
-  watcher,
-  copy
+  clean,
+    html,
+    images,
+    styles,
+    svgstack,
+    logo,
+    copy,
+    server,
+    watcher
+
 );
