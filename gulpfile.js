@@ -75,7 +75,6 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.{jpg,png,svg}",
-    "source/img/logo/*.svg",
     "source/*.webmanifest",
   ], {
     base: "source"
@@ -116,25 +115,24 @@ const watcher = () => {
 
 const dist = series(
   clean,
-    styles,
-    html,
-    copy,
-    logo,
-    images,
-    svgstack
+  styles,
+  html,
+  copy,
+  logo,
+  images,
+  svgstack
 );
 
 exports.dist = dist;
 
 exports.default = series(
   clean,
-    html,
-    images,
-    styles,
-    svgstack,
-    logo,
-    copy,
-    server,
-    watcher
-
+  html,
+  images,
+  styles,
+  svgstack,
+  logo,
+  copy,
+  server,
+  watcher
 );
