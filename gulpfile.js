@@ -58,7 +58,7 @@ const logo = () => {
 exports.logo = logo;
 
 const svgstack = () => {
-  return src("source/icons/*.svg")
+  return src("source/icons/**/*.svg")
     .pipe(svgsprite({
       mode: {
         stack: {}
