@@ -16,14 +16,10 @@
 <body class="page__body">
   <header class="page__header page__header--index header">
     <a class="header__logo">
-      <picture>
-        <source media="(min-width: 1440px)" srcset="img/logo/identity.svg#full">
-        <source media="(min-width: 768px)" srcset="img/logo/identity.svg#full--tablet-hidden: transparent">
-        <img src="img/logo/identity.svg#mark-only-for-mobile" width="34" height="38" alt="Логотип магазина Cat Energy">
-      </picture>
-    </a>
-    <a class="header__logo-text">
-      <img src="img/logo/identity.svg#logo-only" width="101" height="18" alt="Логотип магазина Cat Energy">
+      <svg class="header__logo-svg" role="img" aria-label="Логотип Cat Energy" width="203" height="66">
+        <use class="header__logo-full" xlink:href="img/logo/identity.svg#full"></use>
+        <use class="header__logo-text" xlink:href="img/logo/identity.svg#logo-only"></use>
+      </svg>
     </a>
     <button class="header__menu-toggle">
       <span class="visually-hidden">Открыть меню</span>
@@ -166,7 +162,7 @@
     </div>
     <div class="footer__bottom">
       <a class="footer__logo">
-        <svg class="footer__logo-svg" width="101" height="18">
+        <svg class="footer__logo-svg" width="128" height="24">
           <use xlink:href="img/logo/identity.svg#logo-only"></use>
         </svg>
       </a>
