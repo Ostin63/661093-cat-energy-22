@@ -7,6 +7,7 @@ const autoprefixer = require("autoprefixer");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 const svgsprite = require("gulp-svg-sprite");
 const del = require("del");
 const sync = require("browser-sync").create();
@@ -49,6 +50,16 @@ const images = () => {
 }
 
 exports.images = images;
+
+const createWebp = () => {
+  return src("source/img/*.{jpg,png}")
+    .pipe(webp({
+      quality: 80
+    }))
+    .pipe(dest("dist/img"))
+}
+
+exports.createWebp = createWebp;
 
 const logo = () => {
   return src("source/logo/*.svg")
@@ -118,6 +129,7 @@ const dist = series(
   styles,
   html,
   images,
+  createWebp,
   logo,
   svgstack,
   copy
@@ -130,6 +142,7 @@ exports.default = series(
   styles,
   html,
   images,
+  createWebp,
   logo,
   svgstack,
   copy,
