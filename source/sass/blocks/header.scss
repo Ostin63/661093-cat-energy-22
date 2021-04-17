@@ -5,6 +5,23 @@
   grid-template-rows: 66px 1fr;
   background: var(--basic-white);
 
+  &::before {
+    position: relative;
+    content: "";
+    width: 34px;
+    height: 38px;
+    top: -2px;
+    justify-self: end;
+    align-self: center;
+    background: url("../img/logo/identity.svg#mark-only-for-mobile") 50% 50% no-repeat;
+    background-size: cover;
+    grid-column: 1 / 2;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 24px;
     grid-template-columns: 1fr repeat(2, 130px) 1fr;
@@ -24,43 +41,11 @@
 }
 
 .header__logo {
-  width: 34px;
-  height: 38px;
-  margin-top: -5px;
-  justify-self: end;
-  align-self: center;
-  grid-column: 1 / 2;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 60px;
-    height: 52px;
-    margin-top: 0;
-    margin-right: 74px;
-    grid-row: 1 / 2;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 70px;
-    height: 59px;
-    margin-right: 175px;
-  }
-}
-
-
-.header__logo-text {
   width: 101px;
   height: 18px;
-  margin-left: -10px;
-  justify-self: center;
+  margin-right: 10px;
   align-self: center;
+  justify-self: center;
   grid-column: 2 / 3;
 
   &:hover {
@@ -72,18 +57,49 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-top: 6px;
-    margin-right: -40px;
+    width: 174px;
+    height: 52px;
+    margin-right: -43px;
     grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    justify-self: end;
+    // --mobile-hidden: transparent;
   }
 
   @media (min-width: $desktop-width) {
-    width: 118px;
-    height: 22px;
+    width: 203px;
+    height: 66px;
     margin-top: 6px;
-    margin-right: 43px;
+    margin-right: -52px;
+  }
+}
+
+.header__logo-full {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.header__logo-svg {
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 201px;
+    height: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 219px;
+    height: 66px;
+  }
+}
+
+.header__logo-text {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
