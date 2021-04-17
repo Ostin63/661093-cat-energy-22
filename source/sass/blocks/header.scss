@@ -59,7 +59,7 @@
   @media (min-width: $tablet-width) {
     width: 174px;
     height: 52px;
-    margin-right: -43px;
+    margin-right: -45px;
     grid-column: 1 / 2;
     --tablet-hidden: transparent;
   }
@@ -69,6 +69,7 @@
     height: 66px;
     margin-top: 6px;
     margin-right: -52px;
+    overflow: visible;
   }
 }
 
