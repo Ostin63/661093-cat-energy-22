@@ -57,13 +57,6 @@ const logo = () => {
 
 exports.logo = logo;
 
-const favicon = () => {
-  return src("source/favicon/*.{jpg,png,svg}")
-    .pipe(dest("dist/img/favicon"))
-}
-
-exports.favicon = favicon;
-
 const svgstack = () => {
   return src("source/icons/**/*.svg")
     .pipe(svgsprite({
@@ -124,23 +117,21 @@ const dist = series(
   clean,
   styles,
   html,
-  copy,
-  logo,
-  favicon,
   images,
-  svgstack
+  logo,
+  svgstack,
+  copy
 );
 
 exports.dist = dist;
 
 exports.default = series(
   clean,
+  styles,
   html,
   images,
-  styles,
-  svgstack,
   logo,
-  favicon,
+  svgstack,
   copy,
   server,
   watcher
