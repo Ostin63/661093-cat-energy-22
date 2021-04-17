@@ -61,7 +61,7 @@
     height: 52px;
     margin-right: -43px;
     grid-column: 1 / 2;
-    // --mobile-hidden: transparent;
+    --tablet-hidden: transparent;
   }
 
   @media (min-width: $desktop-width) {
