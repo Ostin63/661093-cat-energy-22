@@ -127,7 +127,7 @@ const watcher = () => {
 const dist = series(
   clean,
   styles,
-  html, 
+  html,
   createWebp,
   logo,
   svgstack,
