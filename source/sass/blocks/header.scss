@@ -69,7 +69,7 @@
     height: 66px;
     margin-top: 6px;
     margin-right: -52px;
-    overflow: visible;
+    --tablet-hidden: var(--yellow);
   }
 }
 
