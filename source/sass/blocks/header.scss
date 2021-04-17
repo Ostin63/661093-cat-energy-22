@@ -1,26 +1,10 @@
 .header {
+  position: relative;
   border-bottom: $border-gray;
   display: grid;
   grid-template-columns: 53px 1fr 44px;
   grid-template-rows: 66px 1fr;
   background: var(--basic-white);
-
-  &::before {
-    position: relative;
-    content: "";
-    width: 34px;
-    height: 38px;
-    top: -2px;
-    justify-self: end;
-    align-self: center;
-    background: url("../img/logo/identity.svg#mark-only-for-mobile") 50% 50% no-repeat;
-    background-size: cover;
-    grid-column: 1 / 2;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
 
   @media (min-width: $tablet-width) {
     padding-top: 24px;
@@ -47,6 +31,23 @@
   align-self: center;
   justify-self: center;
   grid-column: 2 / 3;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 38px;
+    top: 12px;
+    left: 19px;
+    display: block;
+    background: url("../img/logo/identity.svg#mark-only-for-mobile") 50% 50% no-repeat;
+    background-size: cover;
+    grid-column: 1 / 2;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   &:hover {
     opacity: 0.8;
