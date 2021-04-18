@@ -634,6 +634,14 @@
     +.programm__input-icon {
       fill: var(--basic_green);
     }
+
+    +.programm__label::before {
+      box-shadow: var(--shadow-form);
+    }
+
+    +.programm__label--diet::before {
+      border-radius: 50%;
+    }
   }
 
   &:disabled {
