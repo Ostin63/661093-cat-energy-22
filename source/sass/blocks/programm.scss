@@ -270,6 +270,7 @@
   }
 
   @media (min-width: $desktop-width) {
+
     &--data,
     &--comment,
     &--extra {
@@ -585,10 +586,12 @@
   height: 46px;
   padding-left: 13px;
   border: $border-basic;
+  font-weight: normal;
   font-size: 16px;
   line-height: 44px;
   font-family: $font-oswald;
   outline: none;
+  text-transform: uppercase;
 
   &--mail,
   &--phone {
@@ -645,22 +648,10 @@
   }
 
   &:disabled {
+
     +.programm__label,
     +.programm__label::before {
       opacity: 0.3;
-    }
-  }
-
-  &::placeholder {
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 44px;
-    font-family: $font-oswald;
-
-    @media (min-width: $tablet-width) {
-      font-size: 20px;
-      line-height: 46px;
     }
   }
 
