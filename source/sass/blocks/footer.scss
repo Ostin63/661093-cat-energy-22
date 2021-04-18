@@ -122,9 +122,18 @@
 
 .footer__logo {
   width: 100%;
+  display: block;
   padding-top: 36px;
   text-align: center;
   border-bottom: $border-grey-1;
+  outline: none;
+
+  &:focus {
+    .footer__logo-svg {
+      outline: $dorder-dark-2;
+      outline-offset: 2px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 58px;
