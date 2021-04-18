@@ -52,7 +52,7 @@ const images = () => {
 exports.images = images;
 
 const createWebp = () => {
-  return src("source/img/**/*.{jpg,png}")
+  return src("source/img/*.{jpg,png}")
     .pipe(webp({
       quality: 80
     }))
