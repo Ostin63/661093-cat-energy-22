@@ -270,7 +270,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &--data,
     &--comment,
     &--extra {
@@ -644,11 +643,15 @@
 
     +.programm__label--diet::before {
       border-radius: 50%;
+      box-shadow: var(--shadow-form-2);
+    }
+
+    +.programm__label--extra::before {
+      box-shadow: var(--shadow-form-2);
     }
   }
 
   &:disabled {
-
     +.programm__label,
     +.programm__label::before {
       opacity: 0.3;
