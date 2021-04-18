@@ -34,6 +34,7 @@
   --shadow-19: 0 2px 4px var(--black-19);
   --shadow-20: 0 3px 5px var(--black-20);
   --shadow-form: inset 0 0 0 1px var(--special_dark-grey);
+  --shadow-error: inset 0 0 0 1px var(--error);
 }
 
 //Viewports
@@ -60,4 +61,4 @@ $border-catalog: 1px solid var(--gray-catalog);
 $border-green: 2px solid var(--basic_green);
 $border-none: 2px solid var(--white-00);
 $border-white: 2px solid var(--basic-white);
-$border-error: 2px solid var(--error);
+$border-error: 1px solid var(--error);
