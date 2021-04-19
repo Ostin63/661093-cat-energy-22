@@ -88,11 +88,20 @@
 }
 
 .navigation__link {
+  display: block;
+  margin: 0 auto;
   margin-top: -2px;
   text-decoration: none;
   color: inherit;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     margin-top: 6px;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: $dorder-dark-2;
+    outline-offset: 2px;
   }
 }
