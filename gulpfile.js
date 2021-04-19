@@ -6,6 +6,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgsprite = require("gulp-svg-sprite");
@@ -17,9 +18,11 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
+    .pipe(dest("dist/css"))
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(dest("dist/css"))
     .pipe(sync.stream());
@@ -34,6 +37,18 @@ const html = () => {
     }))
     .pipe(dest("dist"));
 }
+
+exports.html = html;
+
+const scripts = () => {
+  return src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(dest('dist/js'))
+    .pipe(sync.stream())
+}
+
+exports.scripts = scripts;
 
 const images = () => {
   return src("source/img/**/*.{png,jpg,svg}")
@@ -122,12 +137,14 @@ const reload = done => {
 const watcher = () => {
   watch("source/*.html", series(html, reload));
   watch("source/sass/**/*.scss", series("styles"));
+  watch("source/js/*.js", series(scripts));
 }
 
 const dist = series(
   clean,
   styles,
   html,
+  scripts,
   createWebp,
   logo,
   svgstack,
@@ -140,6 +157,7 @@ exports.default = series(
   clean,
   styles,
   html,
+  scripts,
   createWebp,
   logo,
   svgstack,
