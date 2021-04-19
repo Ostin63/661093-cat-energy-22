@@ -31,6 +31,7 @@
   align-self: center;
   justify-self: center;
   grid-column: 2 / 3;
+  outline: none;
 
   &::before {
     position: absolute;
@@ -57,12 +58,33 @@
     opacity: 0.6;
   }
 
+  &:focus,
+  &:focus-visible {
+    outline: $dorder-dark-2;
+    outline-offset: 2px;
+
+    &::before {
+      outline: $dorder-dark-2;
+      outline-offset: 2px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 174px;
     height: 52px;
     margin-right: -45px;
     grid-column: 1 / 2;
     --tablet-hidden: transparent;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+
+      .header__logo-svg {
+        outline: $dorder-dark-2;
+        outline-offset: 2px;
+      }
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -116,6 +138,13 @@
   border: none;
   background: url("../img/stack.svg#sandwich") 50% 50% no-repeat;
   grid-column: 3 / -1;
+  outline: none;
+
+  &:focus,
+  &:focus-visible {
+    outline: $dorder-dark-2;
+    outline-offset: 2px;
+  }
 
   &--active {
     background: url("../img/stack.svg#close") 50% 50% no-repeat;
