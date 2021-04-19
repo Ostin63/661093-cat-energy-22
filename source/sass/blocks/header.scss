@@ -140,6 +140,10 @@
   grid-column: 3 / -1;
   outline: none;
 
+  &--none {
+    display: none;
+  }
+
   &:focus,
   &:focus-visible {
     outline: $dorder-dark-2;
