@@ -2,7 +2,7 @@ const header = document.querySelector(".header");
 const toggle = header.querySelector(".header__menu-toggle");
 const navigation = document.querySelector(".navigation");
 
-toggle.classList.remove("header__menu-toggle--active");
+toggle.classList.remove("header__menu-toggle--none");
 navigation.classList.remove("navigation--active");
 
 toggle.addEventListener("click", function () {
