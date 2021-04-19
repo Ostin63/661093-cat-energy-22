@@ -8,6 +8,12 @@ input[type="number"]:not(:focus) {
   appearance: textfield;
 }
 
+*:focus,
+*:focus-visible {
+  outline: $dorder-dark-2;
+  outline-offset: 2px;
+}
+
 img {
   width: 100%;
   height: auto;
