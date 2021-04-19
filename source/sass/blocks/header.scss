@@ -138,13 +138,6 @@
   border: none;
   background: url("../img/stack.svg#sandwich") 50% 50% no-repeat;
   grid-column: 3 / -1;
-  outline: none;
-
-  &:focus,
-  &:focus-visible {
-    outline: $dorder-dark-2;
-    outline-offset: 2px;
-  }
 
   &--active {
     background: url("../img/stack.svg#close") 50% 50% no-repeat;
