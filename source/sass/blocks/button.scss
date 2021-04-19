@@ -8,7 +8,7 @@
   border: none;
   font-family: $font-oswald;
   box-sizing: border-box;
-  outline: none;
+  //outline: none;
 
   &--green {
     color: var(--basic-white);
@@ -36,11 +36,5 @@
     &:active {
       color: var(--black-30);
     }
-  }
-
-  &:focus,
-  &:focus-visible {
-    outline: $dorder-dark-2;
-    outline-offset: 2px;
   }
 }
