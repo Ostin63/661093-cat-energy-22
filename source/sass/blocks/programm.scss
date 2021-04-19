@@ -660,11 +660,12 @@
 
   &--comment {
     height: 150px;
+    padding-top: 5px;
     line-height: 30px;
     resize: vertical;
 
     &::placeholder {
-      padding-top: 9px;
+      padding-top: 4px;
       line-height: 18px;
 
       @media (min-width: $tablet-width) {
