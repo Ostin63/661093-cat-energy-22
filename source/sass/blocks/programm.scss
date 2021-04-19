@@ -660,17 +660,11 @@
 
   &--comment {
     height: 150px;
-    padding-top: 5px;
-    line-height: 30px;
+    line-height: 35px;
     resize: vertical;
 
-    &::placeholder {
-      padding-top: 4px;
-      line-height: 18px;
-
-      @media (min-width: $tablet-width) {
-        line-height: 31px;
-      }
+    @media (min-width: $tablet-width) {
+      line-height: 48px;
     }
 
     @media (min-width: $tablet-width) {
