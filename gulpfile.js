@@ -1,12 +1,13 @@
-const { src, dest, watch, series } = require("gulp");
+const { src, dest, watch, series, parallel } = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
-const uglify = require("gulp-uglify-es").default;
+const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgsprite = require("gulp-svg-sprite");
@@ -18,13 +19,13 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(dest("dist/css"))
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(dest("dist/css"))
+    .pipe(dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -35,16 +36,14 @@ const html = () => {
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(dest("dist"));
+    .pipe(dest("build"));
 }
-
-exports.html = html;
 
 const scripts = () => {
   return src("source/js/*.js")
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(rename("script.min.js"))
-    .pipe(dest('dist/js'))
+    .pipe(dest('build/js'))
     .pipe(sync.stream())
 }
 
@@ -61,64 +60,59 @@ const images = () => {
       }),
       imagemin.svgo()
     ]))
-    .pipe(dest("source/img"))
+    .pipe(dest("build/img"))
 }
-
 exports.images = images;
 
 const createWebp = () => {
   return src("source/img/*.{jpg,png}")
     .pipe(webp({
-      quality: 80
+      quality: 90
     }))
-    .pipe(dest("dist/img"))
+    .pipe(dest("build/img"))
 }
-
 exports.createWebp = createWebp;
 
 const logo = () => {
-  return src("source/logo/*.svg")
-    .pipe(dest("dist/img/logo"))
+  return src("source/img/logo/*.svg")
+    .pipe(dest("build/img/logo"))
 }
-
 exports.logo = logo;
 
 const svgstack = () => {
-  return src("source/icons/**/*.svg")
+  return src("source/img/icons/**/*.svg")
     .pipe(svgsprite({
       mode: {
         stack: {}
       }
     }))
     .pipe(rename("stack.svg"))
-    .pipe(dest("dist/img"));
+    .pipe(dest("build/img"));
 }
-
 exports.svgstack = svgstack;
 
 const copy = (done) => {
   src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.{jpg,png,svg}",
+    "source/img/**/*.{jpg,png}",
     "source/*.webmanifest",
   ], {
     base: "source"
   })
-    .pipe(dest("dist"))
+    .pipe(dest("build"))
   done();
 }
-
 exports.copy = copy;
 
 const clean = () => {
-  return del("dist");
+  return del("build");
 };
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'dist'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -126,7 +120,6 @@ const server = (done) => {
   });
   done();
 }
-
 exports.server = server;
 
 const reload = done => {
@@ -135,33 +128,40 @@ const reload = done => {
 }
 
 const watcher = () => {
-  watch("source/*.html", series(html, reload));
-  watch("source/sass/**/*.scss", series("styles"));
+  watch("source/sass/**/*.scss", series(styles));
   watch("source/js/*.js", series(scripts));
+  watch("source/*.html", series(html, reload));
 }
 
-const dist = series(
+const build = series(
   clean,
-  styles,
-  html,
-  scripts,
-  createWebp,
-  logo,
-  svgstack,
-  copy
+  parallel(
+    styles,
+    html,
+    scripts,
+    logo,
+    svgstack,
+    copy,
+    images,
+    createWebp
+  )
 );
 
-exports.dist = dist;
+exports.build = build;
 
 exports.default = series(
   clean,
-  styles,
-  html,
-  scripts,
-  createWebp,
-  logo,
-  svgstack,
-  copy,
-  server,
-  watcher
+  parallel(
+    styles,
+    html,
+    scripts,
+    logo,
+    svgstack,
+    copy,
+    createWebp
+  ),
+  series(
+    server,
+    watcher
+  )
 );
