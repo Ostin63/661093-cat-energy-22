@@ -13,12 +13,13 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "4.1.0",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "3.0.0",
     "gulp-svg-sprite": "^1.5.0",
-    "gulp-uglify-es": "^2.0.0",
+    "gulp-terser": "^2.0.1",
     "gulp-webp": "^4.0.1",
     "postcss": "8.2.8",
+    "postcss-csso": "^5.0.1",
     "stylelint": "13.12.0",
     "stylelint-config-htmlacademy": "0.1.4"
   },
@@ -26,9 +27,13 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
+    "build": "gulp build",
     "start": "gulp"
   },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ],
   "editorconfig-cli": [
     "*.json",
     "*.js",
@@ -38,6 +43,6 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "12.18.2"
+    "node": "14.16.0"
   }
 }
