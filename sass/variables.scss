@@ -1,0 +1,66 @@
+// Color
+
+:root {
+  --basic-white: #ffffff;
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-00: rgba(255, 255, 255, 0);
+  --black-16: rgba(0, 0, 0, 0.16);
+  --black-19: rgba(0, 0, 0, 0.19);
+  --black-20: rgba(0, 0, 0, 0.2);
+  --black-24: rgba(0, 0, 0, 0.24);
+  --black-30: rgba(0, 0, 0, 0.3);
+  --black-40: rgba(0, 0, 0, 0.4);
+  --basic-black: #000000;
+  --special-black: #111111;
+  --basic_grey: #f2f2f2;
+  --gray-bottom: #e6e6e6;
+  --basic-border: #e7e7e7;
+  --gray-catalog: #ebebeb;
+  --gray-background: #eaeaea;
+  --special_grey: #cdcdcd;
+  --special_grey-1: #d9d9d9;
+  --special_grey-2: #666666;
+  --special_dark-grey: #444444;
+  --special_dark-grey-2: #222222;
+  --basic_green: #68b738;
+  --basic_green-2: #5eaa2f;
+  --green-85: rgba(104, 183, 56, 0.85);
+  --error: #ff8282;
+  --yellow: #fdc305;
+  --linear-gradient: linear-gradient(180deg, var(--basic-white) 197px, var(--gray-background) 197px);
+  --linear-gradient-cat: linear-gradient(180deg, var(--basic-white) 173px, var(--gray-background) 173px);
+  --linear-gradient-cat-desktop: linear-gradient(180deg, var(--basic-white) 192px, var(--gray-background) 192px);
+  --shadow-16: 0 1px 3px var(--black-16);
+  --shadow-19: 0 2px 4px var(--black-19);
+  --shadow-20: 0 3px 5px var(--black-20);
+  --shadow-form: inset 0 0 0 1px var(--special_dark-grey);
+  --shadow-form-2: 0 0 0 2px var(--special_dark-grey);
+  --shadow-error: inset 0 0 0 1px var(--error);
+}
+
+//Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// Fonts
+
+$font-arial: "Arial", sans-serif;
+$font-oswald: "Oswald", "Arial", sans-serif;
+
+// Border
+
+$border-black-24: 1px dotted var(--black-24);
+$border-black-40: 1px solid var(--black-40);
+$border-basic_grey: 2px solid var(--basic_grey);
+$border-gray: 1px solid var(--gray-bottom);
+$border-basic: 1px solid var(--basic-border);
+$border-grey: 1px solid var(--special_grey);
+$border-dark: 1px solid var(--special_dark-grey);
+$dorder-dark-2: 2px solid var(--special_dark-grey);
+$border-grey-1: 1px solid var(--special_grey-1);
+$border-catalog: 1px solid var(--gray-catalog);
+$border-green: 2px solid var(--basic_green);
+$border-none: 2px solid var(--white-00);
+$border-white: 2px solid var(--basic-white);
+$border-error: 1px solid var(--error);

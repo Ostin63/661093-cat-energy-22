@@ -1,0 +1,11 @@
+.hovericon {
+  fill: var(--special_grey-2);
+
+  &:hover {
+    fill: var(--basic_green);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
