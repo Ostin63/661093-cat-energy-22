@@ -94,6 +94,11 @@
   text-decoration: none;
   color: inherit;
 
+  &--white:focus,
+  &--white:focus-visible {
+    outline: $border-white;
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 6px;
   }
