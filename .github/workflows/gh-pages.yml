@@ -21,24 +21,18 @@ jobs:
           node-version: '14.x'
 
       - name: Installing Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Linting
         run: npm test
 
-      - name: styles
-        run: npx gulp styles
-
-      - name: stack
-        run: npx gulp svgstack
-
       - name: Building
-        run: npx gulp logo
+        run: npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FOLDER: ./source
+          FOLDER: ./build
           BRANCH: gh-pages
-          SINGLE_COMMIT: true
+          SINGLE_COMMIT: false
