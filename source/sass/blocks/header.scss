@@ -60,11 +60,11 @@
 
   &:focus,
   &:focus-visible {
-    outline: $dorder-dark-2;
+    outline: $border-dark-2;
     outline-offset: 2px;
 
     &::before {
-      outline: $dorder-dark-2;
+      outline: $border-dark-2;
       outline-offset: 2px;
     }
   }
@@ -81,7 +81,7 @@
       outline: none;
 
       .header__logo-svg {
-        outline: $dorder-dark-2;
+        outline: $border-dark-2;
         outline-offset: 2px;
       }
     }
@@ -146,7 +146,7 @@
 
   &:focus,
   &:focus-visible {
-    outline: $dorder-dark-2;
+    outline: $border-dark-2;
     outline-offset: 2px;
   }
 

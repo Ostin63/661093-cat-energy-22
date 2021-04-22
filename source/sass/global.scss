@@ -10,7 +10,7 @@ input[type="number"]:not(:focus) {
 
 *:focus,
 *:focus-visible {
-  outline: $dorder-dark-2;
+  outline: $border-dark-2;
   outline-offset: 2px;
 }
 
