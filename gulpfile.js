@@ -152,13 +152,13 @@ exports.build = build;
 
 exports.default = series(
   clean,
+  copy,
   parallel(
     styles,
     html,
     scripts,
     logo,
     svgstack,
-    copy,
     createWebp
   ),
   series(
