@@ -4,14 +4,14 @@
   grid-template-columns: 20px 1fr 20px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 68px;
+    padding-top: 69px;
     padding-bottom: 75px;
     grid-template-columns: 1fr repeat(2, 131px) 1fr;
     grid-column-gap: 62px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 74px;
+    padding-top: 75px;
     padding-bottom: 86px;
     grid-template-columns: 1fr repeat(2, 245px) 1fr;
     grid-column-gap: 80px;
