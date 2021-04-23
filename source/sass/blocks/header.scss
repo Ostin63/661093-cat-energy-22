@@ -25,30 +25,10 @@
 }
 
 .header__logo {
-  width: 101px;
-  height: 18px;
-  margin-right: 10px;
-  align-self: center;
+  display: block;
   justify-self: center;
+  align-self: center;
   grid-column: 2 / 3;
-  outline: none;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 34px;
-    height: 38px;
-    top: 12px;
-    left: 19px;
-    display: block;
-    background: url("../img/logo/identity.svg#mark-only-for-mobile") 50% 50% no-repeat;
-    background-size: cover;
-    grid-column: 1 / 2;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
 
   &:hover {
     opacity: 0.8;
@@ -63,67 +43,72 @@
     outline: $border-dark-2;
     outline-offset: 2px;
 
-    &::before {
-      outline: $border-dark-2;
-      outline-offset: 2px;
+    @media (min-width: $tablet-width) {
+      margin-left: -12px;
     }
-  }
 
-  @media (min-width: $tablet-width) {
-    width: 174px;
-    height: 52px;
-    margin-right: -45px;
-    grid-column: 1 / 2;
-    --tablet-hidden: transparent;
+    .header__logo-full {
+      outline: $border-dark-2;
+      outline-offset: -12px;
 
-    &:focus,
-    &:focus-visible {
-      outline: none;
-
-      .header__logo-svg {
-        outline: $border-dark-2;
-        outline-offset: 2px;
+      @media (min-width: $tablet-width) {
+        outline: none;
       }
     }
   }
 
+  @media (min-width: $tablet-width) {
+    width: 189px;
+    height: 52px;
+    margin-top: -2px;
+    margin-right: -40px;
+    display: flex;
+    justify-self: end;
+    grid-column: 1 / 2;
+  }
+
   @media (min-width: $desktop-width) {
-    width: 203px;
+    width: 218px;
     height: 66px;
-    margin-top: 6px;
-    margin-right: -52px;
-    --tablet-hidden: var(--yellow);
+    margin-right: 43px;
   }
 }
 
 .header__logo-full {
-  display: none;
+  position: absolute;
+  padding: 0;
+  width: 70px;
+  height: 66px;
+  left: 0;
+  top: 2px;
 
   @media (min-width: $tablet-width) {
-    display: block;
-  }
-}
-
-.header__logo-svg {
-  width: 101px;
-  height: 18px;
-
-  @media (min-width: $tablet-width) {
-    width: 201px;
-    height: 58px;
+    position: static;
+    width: 90px;
+    height: 66px;
+    margin-top: -6px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 219px;
-    height: 66px;
+    width: 100px;
+    margin-top: 0;
   }
 }
 
 .header__logo-text {
-  display: block;
+  width: 101px;
+  height: 18px;
+  justify-self: center;
 
   @media (min-width: $tablet-width) {
-    display: none;
+    width: 124px;
+    height: 25px;
+    margin-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    margin-top: 25px;
   }
 }
 
