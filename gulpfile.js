@@ -75,7 +75,13 @@ exports.createWebp = createWebp;
 
 const logo = () => {
   return src("source/img/logo/*.svg")
-    .pipe(dest("build/img/logo"))
+    .pipe(svgsprite({
+    mode: {
+      stack: {}
+    }
+  }))
+    .pipe(rename("logo.svg"))
+    .pipe(dest("build/img"))
 }
 exports.logo = logo;
 
