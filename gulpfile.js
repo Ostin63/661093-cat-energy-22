@@ -136,13 +136,13 @@ const watcher = () => {
 
 const build = series(
   clean,
+  copy,
   parallel(
     styles,
     html,
     scripts,
     logo,
     svgstack,
-    copy,
     images,
     createWebp
   )
