@@ -50,7 +50,7 @@ const scripts = () => {
 exports.scripts = scripts;
 
 const images = () => {
-  return src("source/img/**/*.{png,jpg,svg}")
+  return src("source/img/**/*.{png,jpg}")
     .pipe(imagemin([
       imagemin.mozjpeg({
         progressive: true
@@ -76,10 +76,10 @@ exports.createWebp = createWebp;
 const logo = () => {
   return src("source/img/logo/*.svg")
     .pipe(svgsprite({
-    mode: {
-      stack: {}
-    }
-  }))
+      mode: {
+        stack: {}
+      }
+    }))
     .pipe(rename("logo.svg"))
     .pipe(dest("build/img"))
 }
@@ -103,7 +103,7 @@ const copy = (done) => {
     "source/*.ico",
     "source/img/favicon/favicon.svg",
     "source/img/**/*.{jpg,png}",
-    "source/*.webmanifest",
+    "source/*.webmanifest"
   ], {
     base: "source"
   })
