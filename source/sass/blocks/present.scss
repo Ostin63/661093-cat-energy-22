@@ -27,7 +27,9 @@
   height: 289px;
   padding-top: 186px;
   background-color: var(--basic_green);
-  background: url("../img/gift-photo-mobile.png") 50% 50% no-repeat;
+  background-image: url("../img/gift-photo-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
@@ -40,7 +42,9 @@
     height: 200px;
     padding-top: 71px;
     background-color: var(--basic_green);
-    background: url("../img/gift-photo-tablet.png") 50% 50% no-repeat;
+    background-image: url("../img/gift-photo-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
@@ -56,7 +60,9 @@
     padding-left: 41px;
     padding-right: 43px;
     background-color: var(--basic_green);
-    background: url("../img/gift-photo-desktop.png") 50% 50% no-repeat;
+    background-image: url("../img/gift-photo-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
