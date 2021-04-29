@@ -694,15 +694,6 @@
   }
 }
 
-.error {
-  border: $border-error;
-  box-shadow: var(--shadow-error);
-
-  +.programm__input-icon {
-    fill: var(--error);
-  }
-}
-
 .programm__input-icon {
   position: absolute;
   line-height: 46px;

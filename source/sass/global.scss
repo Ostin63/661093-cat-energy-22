@@ -8,6 +8,15 @@ input[type="number"]:not(:focus) {
   appearance: textfield;
 }
 
+.error {
+  border: $border-error;
+  box-shadow: var(--shadow-error);
+
+  +.programm__input-icon {
+    fill: var(--error);
+  }
+}
+
 *:focus,
 *:focus-visible {
   outline: $border-dark-2;
