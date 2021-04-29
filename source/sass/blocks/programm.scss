@@ -665,8 +665,7 @@
   }
 
   &:disabled {
-    +.programm__label,
-    +.programm__label::before {
+    +.programm__label {
       opacity: 0.3;
     }
   }
