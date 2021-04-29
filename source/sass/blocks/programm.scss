@@ -592,6 +592,19 @@
   outline: none;
   text-transform: uppercase;
 
+  &:not(:focus) {
+    appearance: textfield;
+  }
+
+  &--error {
+    border: $border-error;
+    box-shadow: var(--shadow-error);
+
+    +.programm__input-icon {
+      fill: var(--error);
+    }
+  }
+
   &--mail,
   &--phone {
     padding-right: 40px;
