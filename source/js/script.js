@@ -13,6 +13,8 @@ toggle.addEventListener("click", function () {
 // Map
 
 const footerMap = document.querySelector(".footer__map-img");
+const footerIframe = document.querySelector(".footer__iframe")
 if (footerMap) {
+  footerIframe.classList.remove("footer__iframe--none");
   footerMap.classList.add("visually-hidden");
 }
