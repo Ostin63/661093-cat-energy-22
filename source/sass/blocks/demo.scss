@@ -19,7 +19,7 @@
     border-top: none;
     grid-template-columns: 1fr repeat(2, 245px) 1fr;
     grid-column-gap: 80px;
-    grid-template-rows: 205px 96px 227px;
+    grid-template-rows: 205px max-content 227px;
     grid-row-gap: 69px;
 
     &::before {
