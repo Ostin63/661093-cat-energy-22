@@ -15,19 +15,21 @@
   }
 
   @media (min-width: $tablet-width) {
+    width: 440px;
     margin-top: 0;
-    padding-left: 74px;
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
-    grid-column-gap: 35px;
+    margin-left: 74px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     grid-column: 2 / -1;
     grid-row: 1 / -1;
     align-items: center;
   }
 
   @media (min-width: $desktop-width) {
+    width: 478px;
     height: 60px;
-    padding-left: 90px;
+    margin-left: 90px;
     grid-column: 3 / -1;
   }
 }
