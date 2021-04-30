@@ -209,6 +209,7 @@
 }
 
 .footer__item {
+  margin: 3px;
   display: inline-block;
   align-self: center;
 }
@@ -220,12 +221,13 @@
     width: 23px;
     height: 16px;
     margin-top: 5px;
-    margin-left: -2px;
+    margin-left: -5px;
 
     @media (min-width: $tablet-width) {
       width: 31px;
       height: 22px;
       margin: 0;
+      margin-left: -3px;
     }
   }
 
@@ -245,6 +247,7 @@
     width: 13px;
     height: 18px;
     margin-top: 4px;
+    margin-right: -3px;
 
     @media (min-width: $tablet-width) {
       width: 21px;
