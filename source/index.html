@@ -81,9 +81,10 @@
             собак?
             Серия Cat Energy Pro поможет вашему коту нарастить
             необходимые мышцы!</p>
-            <div class="directions__wrapper-button">
-              <a class="directions__button directions__button--arrow directions__button--arrow-up" href="#">каталог pro</a>
-            </div>
+          <div class="directions__wrapper-button">
+            <a class="directions__button directions__button--arrow directions__button--arrow-up" href="#">каталог
+              pro</a>
+          </div>
         </li>
       </ul>
     </section>
@@ -179,8 +180,12 @@
     <div class="footer__map">
       <iframe class="footer__iframe"
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A3993b2eae56783a7ec18ef27754b192f34c91cda61448cd94b8d2c8ccc37fada&amp;source=constructor"></iframe>
-      <img class="footer__map-img" src="img/map-mobil.jpg"
-        alt="карта засположения магазина Cat Energy ул. Большая Конюшенная, д. 19/8" hidden>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/map.jpg">
+        <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+        <img class="footer__map-img" src="img/map-mobil.jpg"
+          alt="карта засположения магазина Cat Energy ул. Большая Конюшенная, д. 19/8" hidden>
+      </picture>
     </div>
     <div class="footer__bottom">
       <a class="footer__logo">
@@ -226,7 +231,7 @@
     </div>
   </footer>
 
-  <script src="js/script.min.js"></script>
+  <!--<script src="js/script.min.js"></script>-->
 </body>
 
 </html>
