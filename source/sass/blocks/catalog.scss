@@ -142,8 +142,15 @@
 .catalog__cart-title {
   margin: 0;
   color: var(--special_dark-grey-2);
+  font-size: 16px;
+  line-height: 20px;
   text-transform: uppercase;
   font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .catalog__link-image {
